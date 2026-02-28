@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Award, ChevronLeft, ChevronRight } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import heroSlide2 from "@/assets/hero-slide2.jpg";
+import heroSlide3 from "@/assets/hero-slide3.jpg";
 import ricohLogo from "@/assets/ricoh-logo.png";
 
 const slides = [
@@ -19,7 +21,7 @@ const slides = [
   {
     type: "video" as const,
     videoUrl: "https://www.youtube.com/embed/w7hW8LROhHk",
-    bg: heroBg,
+    bg: heroSlide2,
     badge: "Innovation in Action",
     title: <>Smart Solutions<br /><span className="text-primary">for Modern Work</span></>,
     subtitle: "See how Ricoh transforms workspaces",
@@ -29,7 +31,7 @@ const slides = [
   },
   {
     type: "image" as const,
-    bg: heroBg,
+    bg: heroSlide3,
     badge: "Trusted by Businesses Across the Region",
     title: <>Enterprise-Grade<br /><span className="text-primary">IT Distribution</span></>,
     subtitle: "Ricoh • Lenovo • HP • Logitech • ChromaLuxe",
@@ -50,6 +52,8 @@ const HeroSection = () => {
     return () => clearInterval(timer);
   }, [next]);
 
+  const slide = slides[current];
+
   return (
     <section className="relative min-h-[85vh] flex items-center overflow-hidden">
       {/* Background */}
@@ -62,57 +66,80 @@ const HeroSection = () => {
           transition={{ duration: 0.6 }}
           className="absolute inset-0"
         >
-          <img src={slides[current].bg} alt="" className="w-full h-full object-cover" />
+          <img src={slide.bg} alt="" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-ricoh-dark/95 via-ricoh-dark/80 to-ricoh-dark/40" />
         </motion.div>
       </AnimatePresence>
 
       <div className="container relative z-10 py-20">
-        <div className="max-w-2xl">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={current}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5 }}
-            >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="flex items-center gap-2 bg-primary/20 backdrop-blur-sm border border-primary/30 rounded-full px-4 py-2">
-                  <Award className="h-4 w-4 text-primary" />
-                  <span className="text-sm font-medium text-primary-foreground">{slides[current].badge}</span>
-                </div>
-              </div>
-
-              <h1 className="text-5xl md:text-7xl font-heading font-bold text-primary-foreground leading-tight mb-4">
-                {slides[current].title}
-              </h1>
-
-              <div className="flex items-center gap-4 mb-6">
-                {slides[current].showRicohLogo && (
-                  <>
-                    <img src={ricohLogo} alt="Ricoh" className="h-12" />
-                    <div className="h-8 w-px bg-primary-foreground/30" />
-                  </>
-                )}
-                <p className="text-primary-foreground/80 text-lg">
-                  {slides[current].subtitle}
-                </p>
-              </div>
-
-              <p className="text-primary-foreground/70 text-lg mb-8 leading-relaxed">
-                {slides[current].description}
-              </p>
-
-              <Link
-                to={slides[current].cta.href}
-                className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-xl font-heading font-semibold text-base hover:bg-primary/90 transition-all hover:gap-3"
+        <div className={`flex flex-col ${slide.type === "video" ? "lg:flex-row lg:items-center lg:gap-12" : ""}`}>
+          <div className={slide.type === "video" ? "lg:w-1/2" : "max-w-2xl"}>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={current}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.5 }}
               >
-                {slides[current].cta.label}
-                <ArrowRight className="h-5 w-5" />
-              </Link>
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="flex items-center gap-2 bg-primary/20 backdrop-blur-sm border border-primary/30 rounded-full px-4 py-2">
+                    <Award className="h-4 w-4 text-primary" />
+                    <span className="text-sm font-medium text-primary-foreground">{slide.badge}</span>
+                  </div>
+                </div>
+
+                <h1 className="text-5xl md:text-7xl font-heading font-bold text-primary-foreground leading-tight mb-4">
+                  {slide.title}
+                </h1>
+
+                <div className="flex items-center gap-4 mb-6">
+                  {slide.showRicohLogo && (
+                    <>
+                      <img src={ricohLogo} alt="Ricoh" className="h-12" />
+                      <div className="h-8 w-px bg-primary-foreground/30" />
+                    </>
+                  )}
+                  <p className="text-primary-foreground/80 text-lg">
+                    {slide.subtitle}
+                  </p>
+                </div>
+
+                <p className="text-primary-foreground/70 text-lg mb-8 leading-relaxed">
+                  {slide.description}
+                </p>
+
+                <Link
+                  to={slide.cta.href}
+                  className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-xl font-heading font-semibold text-base hover:bg-primary/90 transition-all hover:gap-3"
+                >
+                  {slide.cta.label}
+                  <ArrowRight className="h-5 w-5" />
+                </Link>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          {/* Video embed for video slide */}
+          {slide.type === "video" && slide.videoUrl && (
+            <motion.div
+              key={`video-${current}`}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="lg:w-1/2 mt-8 lg:mt-0"
+            >
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-primary-foreground/10 aspect-video">
+                <iframe
+                  src={slide.videoUrl + "?autoplay=0&rel=0&modestbranding=1"}
+                  title="Ricoh Promotional Video"
+                  className="absolute inset-0 w-full h-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
             </motion.div>
-          </AnimatePresence>
+          )}
         </div>
       </div>
 
