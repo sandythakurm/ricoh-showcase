@@ -1,6 +1,20 @@
 import { motion } from "framer-motion";
-import { brands } from "@/data/products";
 import { Link } from "react-router-dom";
+import brandRicoh from "@/assets/brand-ricoh.jpg";
+import brandHP from "@/assets/brand-hp.jpg";
+import brandLenovo from "@/assets/brand-lenovo.png";
+import brandLogitech from "@/assets/brand-logitech.jpg";
+import brandChromaluxe from "@/assets/brand-chromaluxe.webp";
+import brandIQ from "@/assets/brand-iq.png";
+
+const brandsWithLogos = [
+  { id: "ricoh", name: "Ricoh", logo: brandRicoh, isPrimary: true },
+  { id: "hp", name: "HP", logo: brandHP },
+  { id: "lenovo", name: "Lenovo", logo: brandLenovo },
+  { id: "logitech", name: "Logitech", logo: brandLogitech },
+  { id: "chromaluxe", name: "ChromaLuxe", logo: brandChromaluxe },
+  { id: "iq", name: "IQ", logo: brandIQ },
+];
 
 const BrandsSection = () => (
   <section className="py-16 bg-background">
@@ -17,8 +31,8 @@ const BrandsSection = () => (
         <p className="text-muted-foreground">We partner with the world's leading technology brands</p>
       </motion.div>
 
-      <div className="flex flex-wrap justify-center gap-4">
-        {brands.map((brand, i) => (
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+        {brandsWithLogos.map((brand, i) => (
           <motion.div
             key={brand.id}
             initial={{ opacity: 0, scale: 0.9 }}
@@ -28,18 +42,20 @@ const BrandsSection = () => (
           >
             <Link
               to={`/products?brand=${brand.id}`}
-              className={`flex items-center justify-center px-8 py-4 rounded-xl border transition-all hover:shadow-md ${
+              className={`flex flex-col items-center justify-center p-6 rounded-2xl border transition-all hover:shadow-lg h-32 ${
                 brand.isPrimary
-                  ? "bg-primary/5 border-primary/20 hover:border-primary/40"
+                  ? "bg-primary/5 border-primary/20 hover:border-primary/40 ring-1 ring-primary/10"
                   : "bg-card border-border hover:border-primary/20"
               }`}
             >
-              <span className={`font-heading font-semibold text-lg ${brand.isPrimary ? "text-primary" : "text-foreground"}`}>
-                {brand.name}
-              </span>
+              <img
+                src={brand.logo}
+                alt={brand.name}
+                className="max-h-12 max-w-[120px] object-contain"
+              />
               {brand.isPrimary && (
-                <span className="ml-2 text-xs bg-primary text-primary-foreground px-2 py-0.5 rounded-full font-medium">
-                  Primary
+                <span className="mt-2 text-xs bg-primary text-primary-foreground px-2 py-0.5 rounded-full font-medium">
+                  Primary Partner
                 </span>
               )}
             </Link>
