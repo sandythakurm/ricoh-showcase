@@ -5,16 +5,20 @@ import productWhiteboard from "@/assets/product-whiteboard.jpg";
 import productMeeting from "@/assets/product-meeting.jpg";
 import productLaptop from "@/assets/product-laptop.jpg";
 import productSublimation from "@/assets/product-sublimation.jpg";
+import { scannerProducts } from "./scannerProducts";
 
 export interface Product {
   id: string;
   name: string;
   category: string;
+  subcategory?: string;
   brand: string;
   image: string;
   description: string;
+  overview?: string;
   features: string[];
   specs: Record<string, string>;
+  warranty?: string;
   isFeatured?: boolean;
   isNew?: boolean;
   isBestSeller?: boolean;
@@ -88,38 +92,8 @@ export const products: Product[] = [
     features: ["Compact All-in-One", "Fast Printing", "Easy Setup", "Low Cost per Page"],
     specs: { "Print Speed": "35 ppm", "Resolution": "600 x 600 dpi", "Paper Capacity": "500 sheets" },
   },
-  {
-    id: "fi-8950",
-    name: "fi-8950 Ricoh Scanner",
-    category: "scanners",
-    brand: "ricoh",
-    image: productScanner,
-    description: "Production-level scanner designed for high-volume document scanning with exceptional reliability.",
-    features: ["High Volume Scanning", "A3 Support", "Intelligent Feed", "PaperStream Software", "LCD Display"],
-    specs: { "Scan Speed": "130 ppm / 260 ipm", "ADF Capacity": "750 sheets", "Resolution": "600 dpi", "Paper Size": "Up to A3" },
-    isFeatured: true,
-    isBestSeller: true,
-  },
-  {
-    id: "fi-70f",
-    name: "fi-70F Ricoh Scanner",
-    category: "scanners",
-    brand: "ricoh",
-    image: productScanner,
-    description: "Ultra-compact flatbed scanner ideal for scanning ID cards, passports, and small documents.",
-    features: ["Ultra Compact", "ID Card Scanning", "Passport Scanning", "USB Powered"],
-    specs: { "Type": "Flatbed", "Resolution": "600 dpi", "Scan Area": "A6", "Interface": "USB 2.0" },
-  },
-  {
-    id: "fi-8270",
-    name: "fi-8270 Ricoh Scanner",
-    category: "scanners",
-    brand: "ricoh",
-    image: productScanner,
-    description: "Desktop scanner with ADF and flatbed for mixed document scanning.",
-    features: ["ADF + Flatbed", "Mixed Batch Scanning", "PaperStream IP", "Automatic Feeding"],
-    specs: { "Scan Speed": "70 ppm / 140 ipm", "ADF Capacity": "100 sheets", "Resolution": "600 dpi" },
-  },
+  // Scanner products moved to scannerProducts.ts
+  ...scannerProducts,
   {
     id: "a7510-whiteboard",
     name: "A7510 Interactive Whiteboard",
