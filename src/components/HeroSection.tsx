@@ -66,14 +66,29 @@ const HeroSection = () => {
           transition={{ duration: 0.6 }}
           className="absolute inset-0"
         >
-          <img src={slide.bg} alt="" className="w-full h-full object-cover" />
+          {slide.type === "video" && slide.videoUrl ? (
+            <>
+              <div className="absolute inset-0 overflow-hidden">
+                <iframe
+                  src={slide.videoUrl + "?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&modestbranding=1&loop=1&playlist=w7hW8LROhHk&vq=hd1080"}
+                  title="Background Video"
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300%] h-[300%] pointer-events-none"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
+                  style={{ border: 'none' }}
+                />
+              </div>
+              <img src={slide.bg} alt="" className="w-full h-full object-cover" />
+            </>
+          ) : (
+            <img src={slide.bg} alt="" className="w-full h-full object-cover" />
+          )}
           <div className="absolute inset-0 bg-gradient-to-r from-ricoh-dark/95 via-ricoh-dark/80 to-ricoh-dark/40" />
         </motion.div>
       </AnimatePresence>
 
       <div className="container relative z-10 py-20">
-        <div className={`flex flex-col ${slide.type === "video" ? "lg:flex-row lg:items-center lg:gap-12" : ""}`}>
-          <div className={slide.type === "video" ? "lg:w-1/2" : "max-w-2xl"}>
+        <div className="flex flex-col">
+          <div className="max-w-2xl">
             <AnimatePresence mode="wait">
               <motion.div
                 key={current}
@@ -120,26 +135,6 @@ const HeroSection = () => {
             </AnimatePresence>
           </div>
 
-          {/* Video embed for video slide */}
-          {slide.type === "video" && slide.videoUrl && (
-            <motion.div
-              key={`video-${current}`}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="lg:w-1/2 mt-8 lg:mt-0"
-            >
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-primary-foreground/10 aspect-video">
-                <iframe
-                  src={slide.videoUrl + "?autoplay=0&rel=0&modestbranding=1"}
-                  title="Ricoh Promotional Video"
-                  className="absolute inset-0 w-full h-full"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-              </div>
-            </motion.div>
-          )}
         </div>
       </div>
 
