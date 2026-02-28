@@ -7,20 +7,29 @@ import ProductCard from "@/components/ProductCard";
 import { products, categories, brands } from "@/data/products";
 import { Search } from "lucide-react";
 
+const subcategories = [
+  { id: "workgroup", name: "Workgroup" },
+  { id: "departmental", name: "Departmental" },
+  { id: "network", name: "Network" },
+  { id: "production", name: "Production" },
+];
+
 const ProductsPage = () => {
   const [searchParams] = useSearchParams();
   const [search, setSearch] = useState("");
   const [selectedCategory, setSelectedCategory] = useState(searchParams.get("category") || "");
   const [selectedBrand, setSelectedBrand] = useState(searchParams.get("brand") || "");
+  const [selectedSubcategory, setSelectedSubcategory] = useState("");
 
   const filtered = useMemo(() => {
     return products.filter((p) => {
       const matchSearch = !search || p.name.toLowerCase().includes(search.toLowerCase()) || p.description.toLowerCase().includes(search.toLowerCase());
       const matchCategory = !selectedCategory || p.category === selectedCategory;
       const matchBrand = !selectedBrand || p.brand === selectedBrand;
-      return matchSearch && matchCategory && matchBrand;
+      const matchSubcategory = !selectedSubcategory || p.subcategory === selectedSubcategory;
+      return matchSearch && matchCategory && matchBrand && matchSubcategory;
     });
-  }, [search, selectedCategory, selectedBrand]);
+  }, [search, selectedCategory, selectedBrand, selectedSubcategory]);
 
   return (
     <div className="min-h-screen">
@@ -67,6 +76,18 @@ const ProductsPage = () => {
                 <option key={b.id} value={b.id}>{b.name}</option>
               ))}
             </select>
+            {selectedCategory === "scanners" && (
+              <select
+                value={selectedSubcategory}
+                onChange={(e) => setSelectedSubcategory(e.target.value)}
+                className="px-4 py-3 rounded-xl border bg-card text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/20"
+              >
+                <option value="">All Subcategories</option>
+                {subcategories.map((s) => (
+                  <option key={s.id} value={s.id}>{s.name}</option>
+                ))}
+              </select>
+            )}
           </div>
 
           <p className="text-sm text-muted-foreground mb-6">{filtered.length} products found</p>
