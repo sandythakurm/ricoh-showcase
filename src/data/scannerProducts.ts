@@ -1,4 +1,28 @@
-import productScanner from "@/assets/product-scanner.jpg";
+import imgSp1120n from "@/assets/scanners/sp-1120n.png";
+import imgSp1125n from "@/assets/scanners/sp-1125n.png";
+import imgSp1130n from "@/assets/scanners/sp-1130n.png";
+import imgSp1425 from "@/assets/scanners/sp-1425.png";
+import imgFi70f from "@/assets/scanners/fi-70f.webp";
+import imgFi8040 from "@/assets/scanners/fi-8040.png";
+import imgFi800r from "@/assets/scanners/fi-800r.png";
+import imgFi8150 from "@/assets/scanners/fi-8150.png";
+import imgFi8250 from "@/assets/scanners/fi-8250.png";
+import imgFi8170 from "@/assets/scanners/fi-8170.png";
+import imgFi8270 from "@/assets/scanners/fi-8270.png";
+import imgFi7300nx from "@/assets/scanners/fi-7300nx.png";
+import imgN7100e from "@/assets/scanners/n7100e.png";
+import imgFi8190 from "@/assets/scanners/fi-8190.png";
+import imgFi8290 from "@/assets/scanners/fi-8290.png";
+import imgFi7460 from "@/assets/scanners/fi-7460.png";
+import imgFi7480 from "@/assets/scanners/fi-7480.png";
+import imgFi8820 from "@/assets/scanners/fi-8820.png";
+import imgFi8930 from "@/assets/scanners/fi-8930.png";
+import imgFi8950 from "@/assets/scanners/fi-8950.png";
+import imgFi7600 from "@/assets/scanners/fi-7600.png";
+import imgFi7700s from "@/assets/scanners/fi-7700s.png";
+import imgFi7700 from "@/assets/scanners/fi-7700.png";
+import imgFi7800 from "@/assets/scanners/fi-7800.png";
+import imgFi7900 from "@/assets/scanners/fi-7900.png";
 import type { Product } from "./products";
 
 export const scannerProducts: Product[] = [
@@ -9,7 +33,7 @@ export const scannerProducts: Product[] = [
     category: "scanners",
     subcategory: "Workgroup",
     brand: "ricoh",
-    image: productScanner,
+    image: imgSp1120n,
     description: "Dependable, day-to-day scanning. 2nd generation SP Series designed for budget-conscious organisations taking their first steps towards structured scanning.",
     overview: "The SP-1120N streamlines processes and delivers Organisational Intelligence. Digitising paper processes leads to lower costs and higher productivity. PaperStream software allows SP Series users to enjoy a premium capture experience, while Ricoh's heritage and market-leading technology give assurance of quality and dependable reliability.",
     features: ["20ppm/40ipm Duplex Scanning", "Gigabit Ethernet & USB 3.2", "PaperStream IP & Capture Software", "Automatic Profile Selection", "Automatic Image Clean-up", "LAN Support via PaperStream IPNet", "One-touch Profile Operation", "Compact Desktop Design", "Plastic Card Scanning Support", "ABBYY FineReader Included"],
@@ -35,7 +59,7 @@ export const scannerProducts: Product[] = [
     category: "scanners",
     subcategory: "Workgroup",
     brand: "ricoh",
-    image: productScanner,
+    image: imgSp1125n,
     description: "Mid-range SP Series workgroup scanner with 25ppm speed. Perfect balance of performance and value for growing offices.",
     overview: "The SP-1125N offers increased scanning speed at 25ppm while maintaining the compact, reliable design of the SP Series. PaperStream software ensures premium capture quality with automatic image clean-up and process automation.",
     features: ["25ppm/50ipm Duplex Scanning", "Gigabit Ethernet & USB 3.2", "PaperStream IP & Capture Software", "Automatic Profile Selection", "Automatic Image Clean-up", "LAN Support via PaperStream IPNet", "One-touch Profile Operation", "Compact Desktop Design"],
@@ -58,7 +82,7 @@ export const scannerProducts: Product[] = [
     category: "scanners",
     subcategory: "Workgroup",
     brand: "ricoh",
-    image: productScanner,
+    image: imgSp1130n,
     description: "Top-of-range SP Series workgroup scanner with 30ppm speed. Ideal for busy offices requiring fast, reliable document digitisation.",
     overview: "The SP-1130N delivers the fastest scanning speed in the SP Series at 30ppm, making it ideal for offices with higher throughput needs. Full PaperStream software suite included for automated capture workflows.",
     features: ["30ppm/60ipm Duplex Scanning", "Gigabit Ethernet & USB 3.2", "PaperStream IP & Capture Software", "Automatic Profile Selection", "Automatic Image Clean-up", "LAN Support via PaperStream IPNet", "One-touch Profile Operation", "Compact Desktop Design"],
@@ -81,7 +105,7 @@ export const scannerProducts: Product[] = [
     category: "scanners",
     subcategory: "Workgroup",
     brand: "ricoh",
-    image: productScanner,
+    image: imgSp1425,
     description: "Versatile ADF/Flatbed scanner combining automatic document feeding with flatbed scanning for books, passports and fragile documents.",
     overview: "The SP-1425 offers both ADF and flatbed scanning in one compact unit. This dual capability makes it perfect for offices that need to scan both standard documents and bound materials like books or passports.",
     features: ["25ppm/50ipm ADF + Flatbed", "Duplex Scanning", "USB 2.0 Connectivity", "PaperStream Software Suite", "Book & Passport Scanning", "LED Light Source", "Compact Design"],
@@ -100,7 +124,7 @@ export const scannerProducts: Product[] = [
     category: "scanners",
     subcategory: "Workgroup",
     brand: "ricoh",
-    image: productScanner,
+    image: imgFi70f,
     description: "Ultra-compact A6 flatbed scanner ideal for scanning ID cards, passports, and small documents at the point of service.",
     overview: "The fi-70F is an ultra-compact flatbed scanner designed specifically for scanning ID cards, passports, and small documents. Its tiny footprint makes it perfect for reception desks, counters, and point-of-service locations.",
     features: ["Ultra Compact Design", "A6 Flatbed Scanning", "ID Card & Passport Scanning", "USB Powered", "600 dpi Resolution", "Simplex Scanning"],
@@ -119,7 +143,7 @@ export const scannerProducts: Product[] = [
     category: "scanners",
     subcategory: "Workgroup",
     brand: "ricoh",
-    image: productScanner,
+    image: imgFi8040,
     description: "Feature-rich workgroup scanner with 4.3\" touchscreen, DirectScan PC-less scanning, and versatile LAN/USB connectivity for effortless quality capture.",
     overview: "The fi-8040 combines market-leading image quality, versatile connectivity, and an intuitive 10.9cm colour touchscreen. Its DirectScan application enables PC-less scanning directly to workflows or email addresses, saving both time and effort. Clear Image Capture technology delivers industry-leading OCR accuracy rates.",
     features: ["40ppm/80ipm Duplex Scanning", "4.3\" LCD Touchscreen", "DirectScan PC-less Scanning", "Clear Image Capture Technology", "Gigabit Ethernet & USB 3.2", "PaperStream IP Net Support", "Ultrasonic Multi-Feed Detection", "50-sheet ADF Capacity", "Scanner Central Admin", "Mixed Document Handling"],
@@ -147,7 +171,7 @@ export const scannerProducts: Product[] = [
     category: "scanners",
     subcategory: "Workgroup",
     brand: "ricoh",
-    image: productScanner,
+    image: imgFi800r,
     description: "Innovative return-scan workgroup scanner with both ADF and single-feed return path for ID cards and receipts at the counter.",
     overview: "The fi-800R features a unique return scan path that feeds documents back to the front of the scanner — ideal for counter-service environments where the operator needs to return documents to the customer immediately after scanning.",
     features: ["40ppm/80ipm Duplex Scanning", "Return Scan Path", "ADF + Single Feed", "USB 3.2 Connectivity", "Clear Image Capture", "Counter-Service Design", "Compact Footprint"],
@@ -166,7 +190,7 @@ export const scannerProducts: Product[] = [
     category: "scanners",
     subcategory: "Workgroup",
     brand: "ricoh",
-    image: productScanner,
+    image: imgFi8150,
     description: "High-speed 50ppm workgroup scanner with Gigabit Ethernet and USB 3.2 for demanding scanning environments.",
     overview: "The fi-8150 delivers 50ppm scanning speed in a compact desktop form factor. With both Gigabit Ethernet and USB 3.2 connectivity, it integrates seamlessly into any office network. Clear Image Capture technology ensures industry-leading image quality.",
     features: ["50ppm/100ipm Duplex Scanning", "Gigabit Ethernet & USB 3.2", "Clear Image Capture", "PaperStream Software Suite", "Ultrasonic Multi-Feed Detection", "Automatic Image Clean-up", "LED Light Source"],
@@ -186,7 +210,7 @@ export const scannerProducts: Product[] = [
     category: "scanners",
     subcategory: "Workgroup",
     brand: "ricoh",
-    image: productScanner,
+    image: imgFi8250,
     description: "50ppm ADF/Flatbed workgroup scanner combining high-speed document feeding with flatbed versatility for books and fragile documents.",
     overview: "The fi-8250 pairs a 50ppm ADF with a built-in flatbed, making it the most versatile scanner in the workgroup range. Scan standard documents at speed through the ADF, or use the flatbed for bound materials and delicate items.",
     features: ["50ppm/100ipm ADF + Flatbed", "Duplex Scanning", "Gigabit Ethernet & USB 3.2", "Clear Image Capture", "PaperStream Software", "Mixed Batch Scanning", "Book Scanning via Flatbed"],
@@ -205,7 +229,7 @@ export const scannerProducts: Product[] = [
     category: "scanners",
     subcategory: "Workgroup",
     brand: "ricoh",
-    image: productScanner,
+    image: imgFi8170,
     description: "High-performance 70ppm workgroup scanner for offices with heavy scanning workloads requiring speed and reliability.",
     overview: "The fi-8170 offers departmental-level speed at 70ppm in a workgroup form factor. Ideal for offices with heavy scanning demands, it delivers Clear Image Capture quality with robust paper handling.",
     features: ["70ppm/140ipm Duplex Scanning", "Gigabit Ethernet & USB 3.2", "Clear Image Capture", "PaperStream Software Suite", "Ultrasonic Multi-Feed Detection", "High-Speed Processing"],
@@ -224,7 +248,7 @@ export const scannerProducts: Product[] = [
     category: "scanners",
     subcategory: "Workgroup",
     brand: "ricoh",
-    image: productScanner,
+    image: imgFi8270,
     description: "70ppm ADF/Flatbed workgroup scanner combining high-speed feeding with flatbed versatility for maximum flexibility.",
     overview: "The fi-8270 is the flagship workgroup scanner, combining a blazing 70ppm ADF with a flatbed for ultimate flexibility. Handle everything from high-speed batch scanning to careful flatbed scanning of bound documents.",
     features: ["70ppm/140ipm ADF + Flatbed", "Duplex Scanning", "Gigabit Ethernet & USB 3.2", "Clear Image Capture", "PaperStream Software", "Mixed Batch Scanning"],
@@ -244,7 +268,7 @@ export const scannerProducts: Product[] = [
     category: "scanners",
     subcategory: "Workgroup",
     brand: "ricoh",
-    image: productScanner,
+    image: imgFi7300nx,
     description: "Network-ready workgroup scanner with touchscreen, Wi-Fi, and 60ppm speed for decentralised scanning environments.",
     overview: "The fi-7300NX is a network scanner with a large touchscreen, Wi-Fi connectivity, and 60ppm speed. It can operate without a PC, sending scans directly to network destinations via its built-in touchscreen interface.",
     features: ["60ppm/120ipm Duplex Scanning", "Touchscreen Interface", "Wi-Fi & Gigabit Ethernet", "USB 3.1 Connectivity", "PC-less Network Scanning", "PaperStream NX Manager"],
@@ -266,7 +290,7 @@ export const scannerProducts: Product[] = [
     category: "scanners",
     subcategory: "Network",
     brand: "ricoh",
-    image: productScanner,
+    image: imgN7100e,
     description: "Dedicated network scanner with touchscreen for shared scanning environments. Scan directly to email, folders, and cloud services.",
     overview: "The N7100E is a dedicated network scanner designed for shared environments. Its touchscreen interface lets multiple users scan to email, network folders, and cloud destinations without needing a connected PC.",
     features: ["25ppm/50ipm Duplex Scanning", "Touchscreen Interface", "Gigabit Ethernet", "Network Scan to Email/Folder", "PaperStream NX Manager", "Multi-User Support", "LED Light Source"],
@@ -288,7 +312,7 @@ export const scannerProducts: Product[] = [
     category: "scanners",
     subcategory: "Departmental",
     brand: "ricoh",
-    image: productScanner,
+    image: imgFi8190,
     description: "High-speed 90ppm departmental scanner redefining the standard for business scanning with Clear Image Capture technology.",
     overview: "The fi-8190 redefines the standard for business scanning. With 90ppm speed and Clear Image Capture, it delivers exceptional image quality and industry-leading OCR accuracy rates. Designed for demanding departmental environments with high daily volumes.",
     features: ["90ppm/180ipm Duplex Scanning", "Clear Image Capture Technology", "Gigabit Ethernet & USB 3.2", "PaperStream Software Suite", "Ultrasonic Multi-Feed Detection", "Intelligent Paper Protection", "High Volume Capacity", "LED Light Source"],
@@ -309,7 +333,7 @@ export const scannerProducts: Product[] = [
     category: "scanners",
     subcategory: "Departmental",
     brand: "ricoh",
-    image: productScanner,
+    image: imgFi8290,
     description: "90ppm departmental scanner with ADF and flatbed for maximum document handling flexibility in high-volume environments.",
     overview: "The fi-8290 adds flatbed capability to the 90ppm fi-8190 platform. This combination of high-speed ADF and flatbed scanning makes it the most versatile departmental scanner for organisations processing diverse document types.",
     features: ["90ppm/180ipm ADF + Flatbed", "Duplex Scanning", "Clear Image Capture", "Gigabit Ethernet & USB 3.2", "PaperStream Software Suite", "Mixed Document Handling"],
@@ -328,7 +352,7 @@ export const scannerProducts: Product[] = [
     category: "scanners",
     subcategory: "Departmental",
     brand: "ricoh",
-    image: productScanner,
+    image: imgFi7460,
     description: "A3-capable 60ppm departmental scanner for organisations requiring large-format document scanning with reliable paper handling.",
     overview: "The fi-7460 handles A3 documents at 60ppm, making it ideal for departments processing engineering drawings, legal documents, and other large-format materials alongside standard A4 documents.",
     features: ["60ppm/120ipm Duplex Scanning", "A3 Document Support", "USB 3.0 Connectivity", "PaperStream Software Suite", "Paper Protection Technology", "LED Light Source", "Large ADF Capacity"],
@@ -348,7 +372,7 @@ export const scannerProducts: Product[] = [
     category: "scanners",
     subcategory: "Departmental",
     brand: "ricoh",
-    image: productScanner,
+    image: imgFi7480,
     description: "High-speed 80ppm A3 departmental scanner for heavy-duty large-format scanning operations requiring maximum throughput.",
     overview: "The fi-7480 delivers 80ppm scanning speed with A3 support, making it the fastest A3 scanner in the departmental range. Engineered for heavy-duty environments processing large volumes of oversized documents.",
     features: ["80ppm/160ipm Duplex Scanning", "A3 Document Support", "USB 3.0 Connectivity", "PaperStream Software Suite", "Heavy-Duty Design", "Paper Protection Technology"],
@@ -370,7 +394,7 @@ export const scannerProducts: Product[] = [
     category: "scanners",
     subcategory: "Production",
     brand: "ricoh",
-    image: productScanner,
+    image: imgFi8820,
     description: "120ppm A3 mid-volume production scanner with state-of-the-art paper protection and dual feed paths for high-volume scanning operations.",
     overview: "The fi-8820 offers 120ppm scanning with a 750-sheet ADF for continuous high-volume scanning. Features both U-turn and straight-through feed paths, state-of-the-art paper protection, and Clear Image Capture technology for industry-leading image quality.",
     features: ["120ppm/240ipm Duplex Scanning", "750-sheet ADF Capacity", "A3 Document Support", "U-turn & Straight-through Paths", "USB 3.2 & Gigabit LAN", "Clear Image Capture", "Stapled Document Detection", "Automatic Skew Correction", "Intelligent Multi-Feed Function", "4.3\" LCD Touchscreen"],
@@ -393,7 +417,7 @@ export const scannerProducts: Product[] = [
     category: "scanners",
     subcategory: "Production",
     brand: "ricoh",
-    image: productScanner,
+    image: imgFi8930,
     description: "130ppm A3 mid-volume production scanner delivering high-speed performance with advanced paper protection for demanding scanning operations.",
     overview: "The fi-8930 steps up to 130ppm with the same robust 750-sheet ADF and dual feed path design. Engineered for operations requiring sustained high-speed scanning with maximum reliability and minimal downtime.",
     features: ["130ppm/260ipm Duplex Scanning", "750-sheet ADF Capacity", "A3 Document Support", "U-turn & Straight-through Paths", "USB 3.2 & Gigabit LAN", "Clear Image Capture", "Stapled Document Detection", "Automatic Skew Correction", "Intelligent Multi-Feed Function"],
@@ -415,7 +439,7 @@ export const scannerProducts: Product[] = [
     category: "scanners",
     subcategory: "Production",
     brand: "ricoh",
-    image: productScanner,
+    image: imgFi8950,
     description: "Flagship 150ppm A3 mid-volume production scanner. 750-sheet ADF, dual feed paths, and state-of-the-art paper protection for maximum throughput.",
     overview: "The fi-8950 offers the performance, resilience, and usability to optimise productivity for high-volume scanning environments. At 150ppm with a 750-sheet ADF, it handles continuous scanning of large volumes. State-of-the-art paper protection including Stapled Documents Detection and Automatic Skew Correction prevent costly delays. Clear Image Capture delivers industry-leading OCR accuracy.",
     features: ["150ppm/300ipm Duplex Scanning", "750-sheet ADF Capacity", "A3 Document Support", "U-turn & Straight-through Paths", "USB 3.2 & Gigabit LAN", "Clear Image Capture Technology", "Stapled Document Detection", "Automatic Skew Correction", "Intelligent Multi-Feed Function", "4.3\" LCD Touchscreen", "Post-Imprinting Options", "23kg Transportable Design", "105° Wide Opening for Maintenance"],
@@ -447,7 +471,7 @@ export const scannerProducts: Product[] = [
     category: "scanners",
     subcategory: "Production",
     brand: "ricoh",
-    image: productScanner,
+    image: imgFi7600,
     description: "80ppm A3 low-volume production scanner with reliable paper handling for professional scanning operations.",
     overview: "The fi-7600 is an 80ppm low-volume production scanner designed for professional use. Its robust construction and advanced paper handling make it ideal for organisations stepping up to production-level scanning.",
     features: ["80ppm/160ipm Duplex Scanning", "A3 Document Support", "USB 3.1 Connectivity", "PaperStream Software Suite", "Paper Protection Technology", "LED Light Source", "Production-grade Reliability"],
@@ -467,7 +491,7 @@ export const scannerProducts: Product[] = [
     category: "scanners",
     subcategory: "Production",
     brand: "ricoh",
-    image: productScanner,
+    image: imgFi7700s,
     description: "75ppm A3 simplex production scanner with ADF and flatbed for professional environments requiring single-sided scanning flexibility.",
     overview: "The fi-7700S is a simplex production scanner with both ADF and flatbed capabilities. At 75ppm, it handles single-sided scanning of A3 documents while the flatbed accommodates books and fragile materials.",
     features: ["75ppm/80ipm Simplex Scanning", "A3 ADF + Flatbed", "USB 3.1 Connectivity", "PaperStream Software Suite", "Paper Protection", "LED Light Source"],
@@ -487,7 +511,7 @@ export const scannerProducts: Product[] = [
     category: "scanners",
     subcategory: "Production",
     brand: "ricoh",
-    image: productScanner,
+    image: imgFi7700,
     description: "100ppm A3 duplex production scanner with ADF and flatbed. Heavy-duty, flexible design for professional high-volume scanning.",
     overview: "The fi-7700 scans A4 landscape documents at 100ppm/200ipm. With a 300-sheet paper chute and both ADF and flatbed, it handles everything from high-speed batch scanning to careful book scanning. Paper Protect function with intelligent Sonic Paper Protection (iSOP) detects anomalies in sound to prevent paper jams.",
     features: ["100ppm/160ipm Duplex Scanning", "A3 ADF + Flatbed", "300-sheet Paper Chute", "iSOP Sonic Paper Protection", "USB 3.1 Connectivity", "Independent Side Guides", "LCD Panel", "Mixed Size Document Handling", "Flexible Design"],
@@ -508,7 +532,7 @@ export const scannerProducts: Product[] = [
     category: "scanners",
     subcategory: "Production",
     brand: "ricoh",
-    image: productScanner,
+    image: imgFi7800,
     description: "110ppm A3 mid-volume production scanner engineered for sustained high-speed scanning with maximum reliability.",
     overview: "The fi-7800 delivers 110ppm scanning with A3 support for mid-volume production environments. Engineered for sustained operation with robust paper handling and reliable performance day after day.",
     features: ["110ppm/220ipm Duplex Scanning", "A3 Document Support", "USB 2.0 Connectivity", "PaperStream Software Suite", "Production-grade Reliability", "LED Light Source"],
@@ -528,7 +552,7 @@ export const scannerProducts: Product[] = [
     category: "scanners",
     subcategory: "Production",
     brand: "ricoh",
-    image: productScanner,
+    image: imgFi7900,
     description: "Flagship 140ppm A3 mid-volume production scanner for the most demanding high-speed document scanning operations.",
     overview: "The fi-7900 is the ultimate production scanner, delivering 140ppm scanning with A3 support. Designed for the most demanding scanning operations where speed, reliability, and image quality are paramount.",
     features: ["140ppm/280ipm Duplex Scanning", "A3 Document Support", "USB 2.0 Connectivity", "PaperStream Software Suite", "Maximum Production Speed", "LED Light Source", "Heavy-Duty Construction"],
