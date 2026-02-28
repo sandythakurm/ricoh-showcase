@@ -7,12 +7,22 @@ import ProductCard from "@/components/ProductCard";
 import { products, categories, brands } from "@/data/products";
 import { Search } from "lucide-react";
 
-const subcategories = [
-  { id: "workgroup", name: "Workgroup" },
-  { id: "departmental", name: "Departmental" },
-  { id: "network", name: "Network" },
-  { id: "production", name: "Production" },
-];
+const subcategoriesMap: Record<string, { id: string; name: string }[]> = {
+  scanners: [
+    { id: "Workgroup", name: "Workgroup" },
+    { id: "Departmental", name: "Departmental" },
+    { id: "Network", name: "Network" },
+    { id: "Production", name: "Production" },
+  ],
+  projectors: [
+    { id: "Compact", name: "Compact" },
+    { id: "Standard Throw", name: "Standard Throw" },
+    { id: "Short Throw", name: "Short Throw" },
+    { id: "Ultra Short Throw", name: "Ultra Short Throw" },
+    { id: "Broad Use", name: "Broad Use" },
+    { id: "High End", name: "High End" },
+  ],
+};
 
 const ProductsPage = () => {
   const [searchParams] = useSearchParams();
@@ -76,14 +86,14 @@ const ProductsPage = () => {
                 <option key={b.id} value={b.id}>{b.name}</option>
               ))}
             </select>
-            {selectedCategory === "scanners" && (
+            {subcategoriesMap[selectedCategory] && (
               <select
                 value={selectedSubcategory}
                 onChange={(e) => setSelectedSubcategory(e.target.value)}
                 className="px-4 py-3 rounded-xl border bg-card text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/20"
               >
                 <option value="">All Subcategories</option>
-                {subcategories.map((s) => (
+                {subcategoriesMap[selectedCategory].map((s) => (
                   <option key={s.id} value={s.id}>{s.name}</option>
                 ))}
               </select>

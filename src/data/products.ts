@@ -6,6 +6,7 @@ import productMeeting from "@/assets/product-meeting.jpg";
 import productLaptop from "@/assets/product-laptop.jpg";
 import productSublimation from "@/assets/product-sublimation.jpg";
 import { scannerProducts } from "./scannerProducts";
+import { projectorProducts } from "./projectorProducts";
 
 export interface Product {
   id: string;
@@ -47,18 +48,8 @@ export const brands = [
 ];
 
 export const products: Product[] = [
-  {
-    id: "ricoh-wul5a50",
-    name: "Ricoh WUL5A50 Business & Classroom Laser Projector",
-    category: "projectors",
-    brand: "ricoh",
-    image: productProjector,
-    description: "Higher lumen count of 5,200 lumens allows for users to project in a variety of settings, including brightly-lit meeting rooms. Integrates seamlessly with your preferred smart home system.",
-    features: ["5,200 Lumens", "WUXGA Resolution", "Laser Light Source", "20,000 Hour Life", "Smart Home Integration", "HDBaseT Connectivity"],
-    specs: { "Brightness": "5,200 lumens", "Resolution": "WUXGA (1920x1200)", "Light Source": "Laser", "Projection Size": "30\" - 300\"", "Connectivity": "HDMI, HDBaseT, USB" },
-    isFeatured: true,
-    isNew: true,
-  },
+  // Projector products from projectorProducts.ts
+  ...projectorProducts,
   {
     id: "ip-c8500",
     name: "IP C8500 Colour A3 Printer",
@@ -92,7 +83,7 @@ export const products: Product[] = [
     features: ["Compact All-in-One", "Fast Printing", "Easy Setup", "Low Cost per Page"],
     specs: { "Print Speed": "35 ppm", "Resolution": "600 x 600 dpi", "Paper Capacity": "500 sheets" },
   },
-  // Scanner products moved to scannerProducts.ts
+  // Scanner products from scannerProducts.ts
   ...scannerProducts,
   {
     id: "a7510-whiteboard",
@@ -117,16 +108,6 @@ export const products: Product[] = [
     specs: { "Video": "4K 360°", "Audio": "8 Microphones", "Speaker": "Built-in", "Connectivity": "USB-C" },
     isFeatured: true,
     isNew: true,
-  },
-  {
-    id: "wul5a40st",
-    name: "Ricoh WUL5A40ST Short Throw Laser Projector",
-    category: "projectors",
-    brand: "ricoh",
-    image: productProjector,
-    description: "Short throw laser projector ideal for small rooms and interactive presentations.",
-    features: ["Short Throw", "Laser Light Source", "WUXGA", "Interactive Ready"],
-    specs: { "Brightness": "4,000 lumens", "Throw Ratio": "0.46:1", "Resolution": "WUXGA" },
   },
   {
     id: "a6510-whiteboard",
