@@ -50,10 +50,22 @@ const ProductDetailPage = () => {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
             >
-              <span className="text-xs font-bold text-primary uppercase tracking-widest">{product.brand}</span>
+              <div className="flex items-center gap-2 mb-1">
+                <span className="text-xs font-bold text-primary uppercase tracking-widest">{product.brand}</span>
+                {product.subcategory && (
+                  <span className="text-xs font-medium bg-secondary text-secondary-foreground px-2 py-0.5 rounded-full">{product.subcategory}</span>
+                )}
+              </div>
               <h1 className="text-3xl md:text-4xl font-heading font-bold mt-2 mb-4">{product.name}</h1>
               <p className="text-muted-foreground text-lg leading-relaxed mb-6">{product.description}</p>
 
+              {/* Overview */}
+              {product.overview && (
+                <div className="mb-8">
+                  <h3 className="font-heading font-semibold mb-3">Overview</h3>
+                  <p className="text-muted-foreground leading-relaxed">{product.overview}</p>
+                </div>
+              )}
               {/* Features */}
               <div className="mb-8">
                 <h3 className="font-heading font-semibold mb-3">Key Features</h3>
@@ -83,6 +95,16 @@ const ProductDetailPage = () => {
                         <span className="text-muted-foreground">{value}</span>
                       </div>
                     ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Warranty */}
+              {product.warranty && (
+                <div className="mb-8">
+                  <h3 className="font-heading font-semibold mb-3">Warranty & Service</h3>
+                  <div className="bg-card border rounded-xl p-4">
+                    <p className="text-sm text-muted-foreground leading-relaxed">{product.warranty}</p>
                   </div>
                 </div>
               )}
