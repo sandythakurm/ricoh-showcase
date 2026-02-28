@@ -18,7 +18,7 @@ const slides = [
   },
   {
     type: "video" as const,
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WcXgQ",
+    videoUrl: "https://www.youtube.com/embed/w7hW8LROhHk",
     bg: heroBg,
     badge: "Innovation in Action",
     title: <>Smart Solutions<br /><span className="text-primary">for Modern Work</span></>,
