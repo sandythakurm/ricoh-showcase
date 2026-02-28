@@ -9,6 +9,16 @@ import ricohLogo from "@/assets/ricoh-logo.png";
 
 const slides = [
   {
+    type: "image" as const,
+    bg: heroBg,
+    badge: "Official Authorized Distributor",
+    title: <>Powering Business<br /><span className="text-primary">with Ricoh</span></>,
+    subtitle: "Your trusted technology partner in MEA & Africa",
+    description: "Bytes Distribution delivers a full suite of Ricoh products — printers, MFPs, projectors, interactive whiteboards, and smart meeting solutions across the region.",
+    cta: { label: "Explore Ricoh Products", href: "/products?brand=ricoh" },
+    showRicohLogo: true,
+  },
+  {
     type: "video" as const,
     videoSrc: "/videos/ricoh-promo.mp4",
     bg: heroSlide2,
@@ -18,16 +28,6 @@ const slides = [
     description: "From intelligent meeting rooms to high-speed production printing, discover how our solutions drive productivity and collaboration.",
     cta: { label: "View All Solutions", href: "/products" },
     showRicohLogo: false,
-  },
-  {
-    type: "image" as const,
-    bg: heroBg,
-    badge: "Official Authorized Distributor",
-    title: <>Powering Business<br /><span className="text-primary">with Ricoh</span></>,
-    subtitle: "Your trusted technology partner in MEA & Africa",
-    description: "Bytes Distribution delivers a full suite of Ricoh products — printers, MFPs, projectors, interactive whiteboards, and smart meeting solutions across the region.",
-    cta: { label: "Explore Ricoh Products", href: "/products?brand=ricoh" },
-    showRicohLogo: true,
   },
   {
     type: "image" as const,
