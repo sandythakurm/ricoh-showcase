@@ -1,0 +1,131 @@
+import { useParams, Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { ArrowLeft, Mail, Phone, Check } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { getProductById, getProductsByCategory } from "@/data/products";
+import ProductCard from "@/components/ProductCard";
+
+const ProductDetailPage = () => {
+  const { id } = useParams<{ id: string }>();
+  const product = getProductById(id || "");
+
+  if (!product) {
+    return (
+      <div className="min-h-screen">
+        <Header />
+        <div className="container py-20 text-center">
+          <h1 className="text-2xl font-heading font-bold mb-4">Product Not Found</h1>
+          <Link to="/products" className="text-primary hover:underline">← Back to Products</Link>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
+
+  const related = getProductsByCategory(product.category).filter((p) => p.id !== product.id).slice(0, 4);
+
+  return (
+    <div className="min-h-screen">
+      <Header />
+
+      <section className="py-8 bg-surface-warm">
+        <div className="container">
+          <Link to="/products" className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors mb-6">
+            <ArrowLeft className="h-4 w-4" /> Back to Products
+          </Link>
+
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Image */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              className="bg-card rounded-2xl border p-8 flex items-center justify-center aspect-square"
+            >
+              <img src={product.image} alt={product.name} className="w-full h-full object-contain" />
+            </motion.div>
+
+            {/* Details */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+            >
+              <span className="text-xs font-bold text-primary uppercase tracking-widest">{product.brand}</span>
+              <h1 className="text-3xl md:text-4xl font-heading font-bold mt-2 mb-4">{product.name}</h1>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-6">{product.description}</p>
+
+              {/* Features */}
+              <div className="mb-8">
+                <h3 className="font-heading font-semibold mb-3">Key Features</h3>
+                <div className="grid grid-cols-2 gap-2">
+                  {product.features.map((f) => (
+                    <div key={f} className="flex items-center gap-2 text-sm">
+                      <Check className="h-4 w-4 text-primary shrink-0" />
+                      <span>{f}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Specs */}
+              {Object.keys(product.specs).length > 0 && (
+                <div className="mb-8">
+                  <h3 className="font-heading font-semibold mb-3">Specifications</h3>
+                  <div className="bg-card border rounded-xl overflow-hidden">
+                    {Object.entries(product.specs).map(([key, value], i) => (
+                      <div
+                        key={key}
+                        className={`flex items-center justify-between px-4 py-3 text-sm ${
+                          i % 2 === 0 ? "bg-secondary/30" : ""
+                        }`}
+                      >
+                        <span className="font-medium">{key}</span>
+                        <span className="text-muted-foreground">{value}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* CTA */}
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href={`mailto:info@bytes-me.com?subject=Quote Request: ${product.name}&body=Hello, I would like to request a quote for ${product.name}.`}
+                  className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-xl font-heading font-semibold hover:bg-primary/90 transition-colors"
+                >
+                  <Mail className="h-5 w-5" />
+                  Request a Quote
+                </a>
+                <a
+                  href="tel:+97156180396"
+                  className="inline-flex items-center gap-2 border border-primary text-primary px-8 py-4 rounded-xl font-heading font-semibold hover:bg-primary/5 transition-colors"
+                >
+                  <Phone className="h-5 w-5" />
+                  Call Us
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Related */}
+      {related.length > 0 && (
+        <section className="py-16 bg-background">
+          <div className="container">
+            <h2 className="text-2xl font-heading font-bold mb-8">Related Products</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {related.map((p) => (
+                <ProductCard key={p.id} product={p} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      <Footer />
+    </div>
+  );
+};
+
+export default ProductDetailPage;
