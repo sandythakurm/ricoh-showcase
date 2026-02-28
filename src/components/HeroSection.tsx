@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Award, ChevronLeft, ChevronRight } from "lucide-react";
@@ -10,7 +10,7 @@ import ricohLogo from "@/assets/ricoh-logo.png";
 const slides = [
   {
     type: "video" as const,
-    videoUrl: "https://www.youtube.com/embed/w7hW8LROhHk",
+    videoSrc: "/videos/ricoh-promo.mp4",
     bg: heroSlide2,
     badge: "Innovation in Action",
     title: <>Smart Solutions<br /><span className="text-primary">for Modern Work</span></>,
@@ -43,6 +43,7 @@ const slides = [
 
 const HeroSection = () => {
   const [current, setCurrent] = useState(0);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   const next = useCallback(() => setCurrent((c) => (c + 1) % slides.length), []);
   const prev = useCallback(() => setCurrent((c) => (c - 1 + slides.length) % slides.length), []);
@@ -51,6 +52,12 @@ const HeroSection = () => {
     const timer = setInterval(next, 15000);
     return () => clearInterval(timer);
   }, [next]);
+
+  useEffect(() => {
+    if (slides[current].type === "video" && videoRef.current) {
+      videoRef.current.play().catch(() => {});
+    }
+  }, [current]);
 
   const slide = slides[current];
 
@@ -66,19 +73,16 @@ const HeroSection = () => {
           transition={{ duration: 0.6 }}
           className="absolute inset-0"
         >
-          {slide.type === "video" && slide.videoUrl ? (
-            <>
-              <div className="absolute inset-0 overflow-hidden">
-                <iframe
-                  src={slide.videoUrl + "?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&modestbranding=1&loop=1&playlist=w7hW8LROhHk&vq=hd1080"}
-                  title="Background Video"
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300%] h-[300%] pointer-events-none"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
-                  style={{ border: 'none' }}
-                />
-              </div>
-              <img src={slide.bg} alt="" className="w-full h-full object-cover" />
-            </>
+          {slide.type === "video" && slide.videoSrc ? (
+            <video
+              ref={videoRef}
+              src={slide.videoSrc}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-full object-cover"
+            />
           ) : (
             <img src={slide.bg} alt="" className="w-full h-full object-cover" />
           )}
