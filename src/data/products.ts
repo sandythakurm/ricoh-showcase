@@ -22,6 +22,7 @@ export interface Product {
   highlights?: { title: string; text: string; image?: string }[];
   features: string[];
   specs: Record<string, string>;
+  specsGrouped?: Record<string, Record<string, string>>;
   warranty?: string;
   isFeatured?: boolean;
   isNew?: boolean;

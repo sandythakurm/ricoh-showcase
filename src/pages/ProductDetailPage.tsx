@@ -1,11 +1,17 @@
 import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowLeft, Mail, Phone, Check, ChevronRight, Zap, Users, Settings, Leaf } from "lucide-react";
+import { ArrowLeft, Mail, Phone, Check, ChevronRight, ChevronDown, Zap, Users, Settings, Leaf } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getProductById, getProductsByCategory } from "@/data/products";
 import ProductCard from "@/components/ProductCard";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const highlightIcons: Record<string, React.ReactNode> = {
   "Enhance Productivity": <Zap className="h-5 w-5" />,
@@ -34,6 +40,8 @@ const ProductDetailPage = () => {
 
   const gallery = product.gallery?.length ? product.gallery : [product.image];
   const related = getProductsByCategory(product.category).filter((p) => p.id !== product.id).slice(0, 4);
+  const hasGroupedSpecs = product.specsGrouped && Object.keys(product.specsGrouped).length > 0;
+  const hasFlatSpecs = Object.keys(product.specs).length > 0;
 
   return (
     <div className="min-h-screen">
@@ -54,21 +62,14 @@ const ProductDetailPage = () => {
         </div>
       </div>
 
-      {/* Hero: Image + Key Info side by side */}
+      {/* Hero: Image + Key Info */}
       <section className="py-10 bg-surface-warm">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-10 items-start">
             {/* Image Gallery */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-            >
+            <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}>
               <div className="bg-card rounded-2xl border p-6 flex items-center justify-center aspect-[4/3] mb-3">
-                <img
-                  src={gallery[activeImage]}
-                  alt={product.name}
-                  className="w-full h-full object-contain"
-                />
+                <img src={gallery[activeImage]} alt={product.name} className="w-full h-full object-contain" />
               </div>
               {gallery.length > 1 && (
                 <div className="flex gap-2">
@@ -88,10 +89,7 @@ const ProductDetailPage = () => {
             </motion.div>
 
             {/* Product Info */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-            >
+            <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }}>
               <div className="flex items-center gap-2 mb-2">
                 <span className="text-xs font-bold text-primary uppercase tracking-widest">{product.brand}</span>
                 {product.isNew && (
@@ -107,7 +105,7 @@ const ProductDetailPage = () => {
               <h1 className="text-3xl md:text-4xl font-heading font-bold mt-1 mb-4">{product.name}</h1>
               <p className="text-muted-foreground text-lg leading-relaxed mb-6">{product.description}</p>
 
-              {/* Key Features - compact grid */}
+              {/* Key Features */}
               <div className="mb-8">
                 <h3 className="font-heading font-semibold mb-3 text-sm uppercase tracking-wider text-muted-foreground">Key Features</h3>
                 <div className="grid grid-cols-2 gap-2">
@@ -126,15 +124,13 @@ const ProductDetailPage = () => {
                   href={`mailto:info@bytes-me.com?subject=Quote Request: ${product.name}&body=Hello, I would like to request a quote for ${product.name}.`}
                   className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-xl font-heading font-semibold hover:bg-primary/90 transition-colors"
                 >
-                  <Mail className="h-5 w-5" />
-                  Request a Quote
+                  <Mail className="h-5 w-5" /> Request a Quote
                 </a>
                 <a
                   href="tel:+97156180396"
                   className="inline-flex items-center gap-2 border border-primary text-primary px-8 py-4 rounded-xl font-heading font-semibold hover:bg-primary/5 transition-colors"
                 >
-                  <Phone className="h-5 w-5" />
-                  Call Us
+                  <Phone className="h-5 w-5" /> Call Us
                 </a>
               </div>
             </motion.div>
@@ -145,12 +141,8 @@ const ProductDetailPage = () => {
       {/* Overview - full width */}
       {product.overview && (
         <section className="py-14 bg-background">
-          <div className="container max-w-4xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
+          <div className="container">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
               <h2 className="text-2xl md:text-3xl font-heading font-bold mb-4">Overview</h2>
               <p className="text-muted-foreground text-lg leading-relaxed">{product.overview}</p>
             </motion.div>
@@ -158,7 +150,7 @@ const ProductDetailPage = () => {
         </section>
       )}
 
-      {/* Highlights - full width cards */}
+      {/* Highlights */}
       {product.highlights && product.highlights.length > 0 && (
         <section className="py-14 bg-surface-warm">
           <div className="container">
@@ -185,21 +177,55 @@ const ProductDetailPage = () => {
         </section>
       )}
 
-      {/* Specifications - full width table */}
-      {Object.keys(product.specs).length > 0 && (
+      {/* Specifications - Grouped Accordion Style */}
+      {hasGroupedSpecs && (
         <section className="py-14 bg-background">
-          <div className="container max-w-4xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
+          <div className="container">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+              <h2 className="text-2xl md:text-3xl font-heading font-bold mb-2">Specifications</h2>
+              <p className="text-muted-foreground mb-8">Explore the details that define this product's capabilities. See the specs that matter most to you.</p>
+              <div className="bg-card border rounded-2xl overflow-hidden">
+                <Accordion type="multiple" className="w-full">
+                  {Object.entries(product.specsGrouped!).map(([group, specs]) => (
+                    <AccordionItem key={group} value={group} className="border-b last:border-b-0">
+                      <AccordionTrigger className="px-6 py-5 text-base font-heading font-bold uppercase tracking-wide hover:no-underline">
+                        {group}
+                      </AccordionTrigger>
+                      <AccordionContent className="px-0 pb-0">
+                        <div className="divide-y divide-border/50">
+                          {Object.entries(specs).map(([key, value], i) => (
+                            <div
+                              key={key}
+                              className={`flex items-start justify-between px-6 py-3 text-sm ${
+                                i % 2 === 0 ? "bg-secondary/20" : ""
+                              }`}
+                            >
+                              <span className="font-medium min-w-[180px] shrink-0">{key}</span>
+                              <span className="text-muted-foreground text-right">{value}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      )}
+
+      {/* Flat Specs fallback */}
+      {!hasGroupedSpecs && hasFlatSpecs && (
+        <section className="py-14 bg-background">
+          <div className="container">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
               <h2 className="text-2xl md:text-3xl font-heading font-bold mb-6">Specifications</h2>
               <div className="bg-card border rounded-2xl overflow-hidden">
                 {Object.entries(product.specs).map(([key, value], i) => (
                   <div
                     key={key}
-                    className={`flex items-start justify-between px-5 py-3.5 text-sm ${
+                    className={`flex items-start justify-between px-6 py-3.5 text-sm ${
                       i % 2 === 0 ? "bg-secondary/30" : ""
                     } ${i < Object.keys(product.specs).length - 1 ? "border-b border-border/50" : ""}`}
                   >
@@ -216,7 +242,7 @@ const ProductDetailPage = () => {
       {/* Warranty */}
       {product.warranty && (
         <section className="py-14 bg-surface-warm">
-          <div className="container max-w-4xl">
+          <div className="container">
             <h2 className="text-2xl font-heading font-bold mb-4">Warranty & Service</h2>
             <div className="bg-card border rounded-2xl p-6">
               <p className="text-muted-foreground leading-relaxed">{product.warranty}</p>
