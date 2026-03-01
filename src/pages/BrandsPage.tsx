@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import CTASection from "@/components/CTASection";
 import { brands } from "@/data/products";
 
 const BrandsPage = () => (
@@ -44,6 +45,7 @@ const BrandsPage = () => (
         </div>
       </div>
     </section>
+    <CTASection />
     <Footer />
   </div>
 );

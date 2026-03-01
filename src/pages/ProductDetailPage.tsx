@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, Mail, Phone, Check, ChevronRight, ChevronDown, Zap, Users, Settings, Leaf } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import CTASection from "@/components/CTASection";
 import { getProductById, getProductsByCategory } from "@/data/products";
 import ProductCard from "@/components/ProductCard";
 import {
@@ -265,6 +266,7 @@ const ProductDetailPage = () => {
         </section>
       )}
 
+      <CTASection />
       <Footer />
     </div>
   );
