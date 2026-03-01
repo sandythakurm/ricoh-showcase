@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import CTASection from "@/components/CTASection";
 import ProductCard from "@/components/ProductCard";
 import { products, categories, brands } from "@/data/products";
 import { Search } from "lucide-react";
@@ -122,6 +123,7 @@ const ProductsPage = () => {
           )}
         </div>
       </section>
+      <CTASection />
       <Footer />
     </div>
   );
