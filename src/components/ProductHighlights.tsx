@@ -22,7 +22,10 @@ const ProductHighlights = ({ highlights }: ProductHighlightsProps) => {
       </div>
       {highlights.map((h, i) => {
         const isReversed = i % 2 !== 0;
-        const bgClass = i % 2 === 0 ? "bg-surface-warm" : "bg-secondary";
+        const usePrimaryTone =
+          h.title === "Enhance Productivity" ||
+          h.title === "Customise Your Environment";
+        const bgClass = usePrimaryTone ? "bg-background" : "bg-secondary";
 
         return (
           <motion.div
