@@ -22,7 +22,7 @@ const ProductHighlights = ({ highlights }: ProductHighlightsProps) => {
       </div>
       {highlights.map((h, i) => {
         const isReversed = i % 2 !== 0;
-        const bgClass = i % 2 === 0 ? "bg-surface-warm" : "bg-background";
+        const bgClass = i % 2 === 0 ? "bg-surface-warm" : "bg-secondary";
 
         return (
           <motion.div
