@@ -7,6 +7,11 @@ import imgPjWul6760 from "@/assets/projectors/pj-wul6760.webp";
 import imgPjWul6670 from "@/assets/projectors/pj-wul6670.webp";
 import type { Product } from "./products";
 
+// Highlight images
+import hlProjectorMeeting from "@/assets/projectors/highlights/projector-meeting.jpg";
+import hlUstProjection from "@/assets/projectors/highlights/ust-projection.jpg";
+import hlDustproofDesign from "@/assets/projectors/highlights/dustproof-design.jpg";
+
 export const projectorProducts: Product[] = [
   // ── Compact Laser Projectors ────────────────────────
   {
@@ -18,6 +23,11 @@ export const projectorProducts: Product[] = [
     image: imgPjWxl5860,
     description: "Compact DLP laser projector with 4,700 lumens, WXGA resolution, and IP6X dust-proof design. Perfect for everyday use in smaller office spaces and meeting rooms.",
     overview: "The PJ WXL5860 is a space-saving compact laser projector with a powerful 4,700 lumens brightness. Its DLP image processing and long-life laser light source make it quick to turn on and easy to use. The IP6X dust-proof sealed optical engine eliminates image speckle and brightness decline caused by dust. Vertical lens shift (+12.4%) makes ceiling mounting easy, and 360-degree installation support expands application possibilities. HDMI 2.0 delivers smooth 4K signal playback. At just 4.3 kg, it's perfectly suited for ad-hoc use, moving from room to room.",
+    highlights: [
+      { title: "Brilliant Visual Performance", text: "4,700 lumens brightness with DLP image processing and NCE Natural Colour Technology covering 92% Rec.709. The compact design at just 4.3kg is perfectly suited for ad-hoc use, moving from room to room.", image: hlProjectorMeeting },
+      { title: "IP6X Dust-Proof Sealed Optics", text: "The IP6X dust-proof sealed optical engine eliminates image speckle and brightness decline caused by dust, ensuring consistent performance in any environment.", image: hlDustproofDesign },
+      { title: "Flexible Installation", text: "Vertical lens shift (+12.4%) makes ceiling mounting easy, and 360-degree installation support with portrait mode expands application possibilities. HDMI 2.0 delivers smooth 4K signal playback.", image: hlUstProjection },
+    ],
     features: [
       "4,700 Lumens Brightness",
       "WXGA (1280x800) Resolution",
@@ -160,6 +170,11 @@ export const projectorProducts: Product[] = [
     image: imgPjWul5a50,
     description: "5,200 lumens WUXGA 3LCD laser projector with 1.6x zoom, +60% vertical lens shift, and USB memory projection. Ideal for meeting rooms and fixed installations.",
     overview: "The PJ WUL5A50 delivers 5,200 lumens of brightness using 3LCD technology for vivid, true-colour images. Its massive +60% vertical lens shift provides unmatched freedom of installation position, making it ideal for both table-top and ceiling-mounted fixed installations. The 1.6x zoom maintains image size across varying distances. WUXGA resolution with 4K signal compatibility ensures sharp, detailed presentations. USB memory projection enables presentations without a laptop.",
+    highlights: [
+      { title: "Vivid 3LCD Colour", text: "5,200 lumens with 3LCD technology for vivid, true-colour images. WUXGA resolution with 4K signal compatibility ensures sharp, detailed presentations in any meeting room.", image: hlProjectorMeeting },
+      { title: "Unmatched Installation Freedom", text: "The massive +60% vertical lens shift provides unmatched freedom of installation position. 1.6x zoom maintains image size across varying distances, and 360-degree installation supports any mounting scenario.", image: hlUstProjection },
+      { title: "Laptop-Free Presentations", text: "USB memory projection enables presentations without a laptop. Grid image correction (187 points) and pincushion/curved correction handle even the trickiest projection surfaces.", image: hlDustproofDesign },
+    ],
     features: [
       "5,200 Lumens Brightness",
       "WUXGA (1920x1200) Resolution",
@@ -235,6 +250,11 @@ export const projectorProducts: Product[] = [
     image: imgPjWul5a40st,
     description: "4,500 lumens WUXGA short throw laser projector. Projects a 100-inch screen from just 0.97m — ideal for small rooms and spaces where distance is limited.",
     overview: "The PJ WUL5A40ST short throw projector can project a 100-inch image from just 0.97m distance, making it ideal for spaces where room is limited. With zero-offset projection, images are fully projected without needing space above or below. 4,500 lumens with 3LCD technology delivers vivid colour in even brightly lit rooms. USB memory projection enables laptop-free presentations, and the 5.5 kg lightweight body supports easy relocation.",
+    highlights: [
+      { title: "Project Big in Small Spaces", text: "Project a 100-inch image from just 0.97m distance, making it ideal for small rooms. Zero-offset projection means images are fully projected without needing space above or below.", image: hlUstProjection },
+      { title: "Vivid 3LCD Performance", text: "4,500 lumens with 3LCD technology delivers vivid colour in even brightly lit rooms. The 5.5 kg lightweight body supports easy relocation between rooms.", image: hlProjectorMeeting },
+      { title: "Advanced Image Correction", text: "Grid image correction (187 points), six-point adjustment, and pincushion/curved correction ensure perfectly aligned images on any surface.", image: hlDustproofDesign },
+    ],
     features: [
       "4,500 Lumens Brightness",
       "WUXGA (1920x1200) Resolution",
@@ -306,6 +326,11 @@ export const projectorProducts: Product[] = [
     image: imgPjUhl3660,
     description: "6,500 lumens 4K Ultra HD UST laser projector with OptiBright technology. Projects an 85-inch image from just 1cm away. IP5X dust-proof, 24/7 operation, up to 40,000-hour life.",
     overview: "The PJ UHL3660 delivers a premium viewing experience in every environment. With 6,500 lumen brightness, 4K Ultra HD resolution via 4-way pixel shift, and unique OptiBright technology (Twin Laser & Phosphor Combination), it produces visibly sharper images with 1,073 million colours. Its incredible 0.24 Ultra Short Throw ratio creates an 85-inch image from just 1cm away. Supporting 360-degree rotation, portrait mode, and multiple mounting options, it's highly adaptable. IP5X dust-proof with 24/7 operation capability and up to 40,000-hour life in Long-Life Mode. Manages up to 100 projectors simultaneously via built-in software.",
+    highlights: [
+      { title: "4K Ultra HD from Just 1cm Away", text: "The incredible 0.24 Ultra Short Throw ratio creates an 85-inch image from just 1cm away. 6,500 lumens with 4K UHD resolution via 4-way pixel shift and OptiBright technology produces visibly sharper images with 1,073 million colours.", image: hlUstProjection },
+      { title: "Built for 24/7 Operation", text: "IP5X dust-proof design with up to 40,000-hour laser life in Long-Life Mode ensures reliable performance around the clock. Manages up to 100 projectors simultaneously via built-in software.", image: hlDustproofDesign },
+      { title: "Unmatched Versatility", text: "360-degree rotation, portrait mode, HDBaseT for 100m HD transmission, and Miracast wireless. Motorised focus and grid adjustment (61×31 points) handle any installation scenario.", image: hlProjectorMeeting },
+    ],
     features: [
       "6,500 Lumens Brightness",
       "4K Ultra HD (3840x2160) via 4-Way Pixel Shift",
@@ -391,6 +416,11 @@ export const projectorProducts: Product[] = [
     image: imgPjWul6760,
     description: "6,000 lumens WUXGA 3LCD laser projector with HDBaseT, 1.6x zoom, and ±29% horizontal / +60% vertical lens shift. Projects 300-inch images from 7.96m away.",
     overview: "The PJ WUL6760 offers power and versatility across a broad range of use cases. With 6,000 lumens and 3LCD technology covering 90.4% of Rec.709, it delivers incredibly clear imagery in small, medium, or even larger venues — projecting a 300-inch image from 7.96m away. HDBaseT enables uncompressed HD transmission up to 100m via a single cable. The extensive ±29% horizontal and +60% vertical lens shift provides maximum freedom for fixed installations. Grid image correction (187 points), curved surface correction, and six-point adjustment handle even the trickiest installations.",
+    highlights: [
+      { title: "Powerful 6,000 Lumen Projection", text: "3LCD technology covering 90.4% of Rec.709 delivers incredibly clear imagery. Projects a 300-inch image from 7.96m away for small, medium, or even larger venues.", image: hlProjectorMeeting },
+      { title: "HDBaseT Long-Range Connectivity", text: "HDBaseT enables uncompressed HD transmission up to 100m via a single cable. The extensive ±29% horizontal and +60% vertical lens shift provides maximum freedom for fixed installations.", image: hlDustproofDesign },
+      { title: "Advanced Image Correction", text: "Grid image correction (187 points), curved surface correction, and six-point adjustment handle even the trickiest installations. USB memory projection enables laptop-free presentations.", image: hlUstProjection },
+    ],
     features: [
       "6,000 Lumens Brightness",
       "WUXGA (1920x1200) Resolution",
@@ -468,6 +498,11 @@ export const projectorProducts: Product[] = [
     image: imgPjWul6670,
     description: "7,200 lumens WUXGA DLP laser projector with IP5X dust-proof, HDBaseT, edge blending, motorised lens, and PIP/PBP for large venues and installations.",
     overview: "The PJ WUL6670 delivers 7,200 lumens with DLP technology and NCE natural colour gain covering 97% Rec.709. Fully motorised focus, zoom (1.25x), and lens shift (V:±55% / H:±25%) enable easy remote adjustment even after ceiling mounting. IP5X dust-proof design protects key optical components. Built-in edge blending combines multiple projectors for extremely large seamless images. HDBaseT supports 100m uncompressed HD transmission. PIP/PBP enables dual-source projection on a single screen.",
+    highlights: [
+      { title: "97% Rec.709 Colour Accuracy", text: "7,200 lumens with DLP technology and NCE natural colour gain covering 97% Rec.709. Fully motorised focus, zoom, and lens shift enable easy remote adjustment even after ceiling mounting.", image: hlProjectorMeeting },
+      { title: "Edge Blending & PIP/PBP", text: "Built-in edge blending combines multiple projectors for extremely large seamless images. PIP/PBP enables dual-source projection on a single screen for versatile presentations.", image: hlUstProjection },
+      { title: "IP5X Dust-Proof Reliability", text: "IP5X dust-proof design protects key optical components. HDBaseT supports 100m uncompressed HD transmission. 20,000-hour laser life ensures long-term reliability.", image: hlDustproofDesign },
+    ],
     features: [
       "7,200 Lumens Brightness",
       "WUXGA (1920x1200) Resolution",
