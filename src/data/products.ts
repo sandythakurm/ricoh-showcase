@@ -7,6 +7,7 @@ import productLaptop from "@/assets/product-laptop.jpg";
 import productSublimation from "@/assets/product-sublimation.jpg";
 import { scannerProducts } from "./scannerProducts";
 import { projectorProducts } from "./projectorProducts";
+import { whiteboardProducts } from "./whiteboardProducts";
 
 export interface Product {
   id: string;
@@ -85,40 +86,8 @@ export const products: Product[] = [
   },
   // Scanner products from scannerProducts.ts
   ...scannerProducts,
-  {
-    id: "a7510-whiteboard",
-    name: "A7510 Interactive Whiteboard",
-    category: "whiteboards",
-    brand: "ricoh",
-    image: productWhiteboard,
-    description: "75-inch interactive whiteboard for modern meeting rooms and classrooms. Multi-touch capability with built-in collaboration tools.",
-    features: ["75\" 4K Display", "Multi-Touch", "Built-in Camera", "Wireless Screen Sharing", "Whiteboard Software"],
-    specs: { "Screen Size": "75 inches", "Resolution": "4K UHD", "Touch Points": "20", "Connectivity": "HDMI, USB-C, Wi-Fi" },
-    isFeatured: true,
-    isNew: true,
-  },
-  {
-    id: "meeting-360",
-    name: "RICOH Meeting 360",
-    category: "smart-meeting",
-    brand: "ricoh",
-    image: productMeeting,
-    description: "360-degree video conferencing camera that captures everyone in the room. AI-powered speaker tracking and noise cancellation.",
-    features: ["360° Video Capture", "AI Speaker Tracking", "Noise Cancellation", "USB-C Plug & Play", "Teams & Zoom Compatible"],
-    specs: { "Video": "4K 360°", "Audio": "8 Microphones", "Speaker": "Built-in", "Connectivity": "USB-C" },
-    isFeatured: true,
-    isNew: true,
-  },
-  {
-    id: "a6510-whiteboard",
-    name: "A6510 Interactive Whiteboard",
-    category: "whiteboards",
-    brand: "ricoh",
-    image: productWhiteboard,
-    description: "65-inch interactive display for huddle rooms and small meeting spaces.",
-    features: ["65\" Display", "Multi-Touch", "Built-in Speakers", "Android OS"],
-    specs: { "Screen Size": "65 inches", "Resolution": "4K UHD", "Touch Points": "20" },
-  },
+  // Whiteboard products from whiteboardProducts.ts
+  ...whiteboardProducts,
   {
     id: "thinkpad-x1-carbon",
     name: "ThinkPad X1 Carbon Gen 12",
