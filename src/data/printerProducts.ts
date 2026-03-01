@@ -39,6 +39,20 @@ import imgM320fse from "@/assets/printers/m-320fse.png";
 import imgM320se from "@/assets/printers/m-320se.png";
 import imgMC320fw from "@/assets/printers/m-c320fw.png";
 
+// Highlight images
+import hlCloudTech from "@/assets/printers/highlights/cloud-technology.jpg";
+import hlSmallPowerful from "@/assets/printers/highlights/small-powerful.jpg";
+import hlEcoDevices from "@/assets/printers/highlights/eco-friendly-devices.jpg";
+import hlAlwaysCurrentTech from "@/assets/printers/highlights/always-current-tech.webp";
+import hlSmartPanel from "@/assets/printers/highlights/smart-operation-panel.webp";
+import hlSustainability from "@/assets/printers/highlights/sustainability.webp";
+import hlSustainabilityC300 from "@/assets/printers/highlights/sustainability-c300.webp";
+import hlSmartDeviceConnector from "@/assets/printers/highlights/smart-device-connector.jpg";
+import hlIntuitivePerformance from "@/assets/printers/highlights/intuitive-performance.png";
+import hlEcoDesign from "@/assets/printers/highlights/eco-design.png";
+import hlSmartPanelClose from "@/assets/printers/highlights/smart-panel-close.jpg";
+import hlAlwaysOnSecurity from "@/assets/printers/highlights/always-on-security.png";
+
 export const printerProducts: Product[] = [
   // ── B&W A4 Printers ────────────────────────────────
   {
@@ -52,9 +66,9 @@ export const printerProducts: Product[] = [
     description: "Fast 35 ppm A4 mono all-in-one with fax, quiet operation, and low energy consumption of 0.5 kWh TEC.",
     overview: "Introducing the IM 350FSE, a versatile and intelligent all-in-one printer designed to enhance your workflow and efficiency. Leveraging cloud technology, the advanced device automates daily document tasks, freeing you to focus on essential business operations. Perfectly suited for dynamic work environments, the IM 350FSE seamlessly integrates with existing systems to deliver exceptional performance and reliability.",
     highlights: [
-      { title: "Cloud Technology Innovation", text: "The IM 350FSE leverages cloud technology to automate daily document tasks. Users can easily and securely print and scan from their mobile devices, with the flexibility to scan documents in colour to cloud storage." },
-      { title: "Small but Powerful", text: "This intelligent all-in-one mono device is compact in design without compromising on all the benefits you expect from a Ricoh device. The low noise design makes this device suitable for small spaces and private offices." },
-      { title: "Boost Sustainability", text: "Blue Angel Mark certified, one of the highest standards of environmental, health and functional quality. Features a TEC value of 0.5kWh and EcoMode to reduce energy waste." },
+      { title: "Benefit from Cloud Technology Innovation", text: "The IM 350FSE intelligent all-in-one printer leverages cloud technology to automate daily document tasks, allowing you to concentrate on essential business operations. Users can easily and securely print and scan from their mobile devices, with the flexibility to scan documents in colour to cloud storage. This seamless integration enables printing from any device with secure connections, enhancing both productivity and convenience in a fast-paced work environment.", image: hlCloudTech },
+      { title: "Small but Powerful", text: "This intelligent all-in-one mono device is compact in design without compromising on all the benefits you expect from a Ricoh device. The low noise design makes this device suitable for small spaces and private offices spaces. Not just a black and white printer, the IM 350FSE also has full colour scan capabilities for more flexibility.", image: hlSmallPowerful },
+      { title: "Boost Sustainability with the Eco-Friendly IM 350FSE", text: "Ensure your print devices fit your sustainability objectives with the IM 350FSE – Blue Angel Mark certified, one of the highest standards of environmental, health and functional quality. Packed full of features to save energy, toner and costs, the A4 black and white intelligent device features a TEC value of 0.5kWh and EcoMode, the energy efficient timer setting for sleep mode to reduce energy waste.", image: hlEcoDevices },
     ],
     features: ["35 ppm Print Speed", "Print, Copy, Scan, Fax", "Scan 43.4 ipm Simplex / 80 ipm Duplex", "Low Noise Operation", "TEC 0.5 kWh/week", "Network Ready"],
     specs: { "Print Speed": "35 ppm", "Resolution": "1,200 × 1,200 dpi", "Paper Size": "A4", "Functions": "Print, Copy, Scan, Fax" },
@@ -80,9 +94,9 @@ export const printerProducts: Product[] = [
     description: "37 ppm A4 mono all-in-one with 1,200 dpi scan resolution and industry-leading low 0.37 kWh energy consumption.",
     overview: "The IM 370 unlocks new value in your print infrastructure with secure, cloud-based printing and scanning. Remote collaboration is easier than ever before with a host of integrated software options. This intelligent A4 mono device offers an output speed of 37 ppm and the added flexibility of A3 capabilities, helping you make the most of your office space. Made using recycled plastics and offering industry leading low TEC value (0.37 kWh), it is the perfect addition to any future-focused business.",
     highlights: [
-      { title: "RICOH Always Current Technology", text: "Firmware delivered directly to your device, ensuring optimal efficiency and security. Add new apps without the need for new hardware, expanding your device capabilities." },
-      { title: "Smart Operation Panel", text: "Intuitive 10.1-inch Smart Operation Panel with soft-key operation, customisable home screen and full internet browser capability for simplified document processes." },
-      { title: "Reduce Environmental Impact", text: "Smaller footprint with enhanced functionality while reducing plastic waste and energy consumption. Designed to deliver optimal performance in an eco-friendly and compact design." },
+      { title: "RICOH Always Current Technology", text: "RICOH Always Current Technology is a firmware delivered directly to your device, ensuring optimal efficiency and security. With the ability to add new apps without the need for new hardware, you can expand your device capabilities and create a true digital workplace. It provides scalable intelligence that can optimise workflows, allowing you to stay prepared for whatever the future holds.", image: hlAlwaysCurrentTech },
+      { title: "RICOH Smart Operation Panel", text: "With the intuitive 10.1 inch Smart Operation Panel, complete with soft-key operation, your Ricoh multi-function printer is even easier to touch, swipe and get the job done, thanks to a range of helpful features, including a completely customisable home screen and full internet browser capability.", image: hlSmartPanel },
+      { title: "Improve Your Carbon Footprint", text: "Ricoh devices prove that it's possible to achieve more with less. By adopting a smaller footprint, the device offers enhanced functionality while reducing plastic waste and energy consumption, resulting in a lower environmental impact. This all-in-one printer is designed to deliver optimal performance in an eco-friendly and compact design.", image: hlSustainability },
     ],
     features: ["37 ppm Print Speed", "Print, Copy, Scan", "1,200 dpi Scan Resolution", "First Copy 4.7 Seconds", "TEC 0.37 kWh/week", "Always Current Technology"],
     specs: { "Print Speed": "37 ppm", "Resolution": "1,200 × 1,200 dpi", "Paper Size": "A4", "Functions": "Print, Copy, Scan" },
@@ -107,9 +121,9 @@ export const printerProducts: Product[] = [
     description: "37 ppm A4 mono all-in-one with fax, integrated software updates, and low 0.381 kWh energy consumption.",
     overview: "The IM 370F offers your organisation a productivity boost with easier access to dynamic and collaborative digital working practices. Access the latest cloud-based solutions for maximum security and seamless workflows. Optimise your office space with a compact mono device delivering fast, high quality output and the added flexibility of A3 scan and copy capabilities. This intelligent all-rounder also helps you do business responsibly, with industry leading low Typical Energy Consumption (TEC) values.",
     highlights: [
-      { title: "Secure Your Data", text: "Intelligent devices fortified with a resilient operating system and up-to-date security features such as encryption, authentication, restricted print output access and data overwrite." },
-      { title: "Reduce Environmental Impact", text: "Smaller footprint with enhanced functionality while reducing plastic waste and energy consumption. Designed to deliver optimal performance in an eco-friendly and compact design." },
-      { title: "Smart Operation Panel", text: "10.1-inch Smart Operation Panel with soft-key operation, customisable home screen and full internet browser capability for high quality printing and low running costs." },
+      { title: "Secure Your Data", text: "Intelligent devices fortified with a resilient operating system and up-to-date security features such as encryption, authentication, restricted print output access and data overwrite. RICOH Always Current Technology ensures continuous protection.", image: hlAlwaysOnSecurity },
+      { title: "Reduce Environmental Impact", text: "Smaller footprint with enhanced functionality while reducing plastic waste and energy consumption. Designed to deliver optimal performance in an eco-friendly and compact design.", image: hlSustainability },
+      { title: "Smart Operation Panel", text: "10.1-inch Smart Operation Panel with soft-key operation, customisable home screen and full internet browser capability for high quality printing and low running costs.", image: hlSmartPanel },
     ],
     features: ["37 ppm Print Speed", "Print, Copy, Scan, Fax", "Integrated Security Updates", "First Copy 4.7 Seconds", "TEC 0.381 kWh/week", "Always Current Technology"],
     specs: { "Print Speed": "37 ppm", "Resolution": "1,200 × 1,200 dpi", "Paper Size": "A4", "Functions": "Print, Copy, Scan, Fax" },
@@ -135,8 +149,8 @@ export const printerProducts: Product[] = [
     description: "Fast 43 ppm A4 mono all-in-one with quiet operation, duplex scanning at 80 ipm, and 0.59 kWh TEC.",
     overview: "This intelligent black and white device offers quick print speeds, fax and colour scan capability, making it an ideal choice for any dynamic work environment. The IM 430FSE delivers exceptional performance and reliability, helping you streamline your daily document tasks and focus on essential business operations.",
     highlights: [
-      { title: "Eco-Friendly Design", text: "Certified with the Blue Angel Mark, the IM 430FSE aligns with sustainability goals. With a TEC value of 0.59kWh and eco-mode for automated sleep mode, it significantly reduces energy waste." },
-      { title: "Compact and Versatile", text: "This all-in-one device is compact while offering features typical of a Ricoh device. Low noise output makes it suitable for small and individual office spaces, plus fax and full colour scanning." },
+      { title: "Eco-Friendly Design", text: "Certified with the Blue Angel Mark, the IM 430FSE aligns with sustainability goals. With a TEC value of 0.59kWh and eco-mode for automated sleep mode, it significantly reduces energy waste.", image: hlEcoDevices },
+      { title: "Compact and Versatile", text: "This all-in-one device is compact while offering features typical of a Ricoh device. Low noise output makes it suitable for small and individual office spaces, plus fax and full colour scanning.", image: hlSmallPowerful },
     ],
     features: ["43 ppm Print Speed", "Print, Copy, Scan, Fax", "Scan 43.4 ipm Simplex / 80 ipm Duplex", "Low Noise Operation", "TEC 0.59 kWh/week", "Network Ready"],
     specs: { "Print Speed": "43 ppm", "Resolution": "1,200 × 1,200 dpi", "Paper Size": "A4", "Functions": "Print, Copy, Scan, Fax" },
@@ -162,9 +176,9 @@ export const printerProducts: Product[] = [
     description: "27 ppm A4 mono multifunction printer with print, copy, scan and fax. Paper capacity up to 1,600 sheets.",
     overview: "Endlessly versatile, the IM 2702 prints and copies in black and white, and scans in colour. Fax functionality is also available as an option. The ARDF quickly scans double-sided originals and multipage documents are printed at speed. With up to three trays on line, it is easy to print onto different paper sizes and to feed envelopes and labels. Localisation is simple as the MFP supports a variety of languages, including Arabic. And, with the IM 2702 easy to install and self-maintain, reliable performance is guaranteed.",
     highlights: [
-      { title: "RICOH Intelligent Support", text: "A multi-faceted service platform that gives instant assistance and enhanced customer experience with a comprehensive suite of tools, diagnostics and help." },
-      { title: "Smart Operation Panel", text: "10.1-inch Smart Operation Panel with soft-key operation, customisable home screen and full internet browser capability." },
-      { title: "Outstanding Security", text: "Security is in the DNA of our entire digital workplace portfolio. Ricoh enables secure access to data whilst ensuring security features don't hinder productivity." },
+      { title: "RICOH Intelligent Support", text: "A multi-faceted service platform that gives instant assistance and enhanced customer experience with a comprehensive suite of tools, diagnostics and help.", image: hlSmartPanelClose },
+      { title: "Smart Operation Panel", text: "10.1-inch Smart Operation Panel with soft-key operation, customisable home screen and full internet browser capability.", image: hlSmartPanel },
+      { title: "Outstanding Security", text: "Security is in the DNA of our entire digital workplace portfolio. Ricoh enables secure access to data whilst ensuring security features don't hinder productivity.", image: hlAlwaysOnSecurity },
     ],
     features: ["27 ppm Print Speed", "Print, Copy, Scan, Fax", "Paper Capacity up to 1,600 Sheets", "600 × 600 dpi Resolution", "Compact Design", "Network Ready"],
     specs: { "Print Speed": "27 ppm", "Resolution": "600 × 600 dpi", "Paper Size": "A4", "Functions": "Print, Copy, Scan, Fax" },
@@ -247,9 +261,9 @@ export const printerProducts: Product[] = [
     description: "30 ppm A4 colour all-in-one with 1,200 dpi, up to 2,000-sheet paper capacity, and low 0.34 kWh TEC.",
     overview: "This colour MFP has a smart touch-screen control panel and is always running the latest technology. Software that automatically updates, along with the ability to add additional functionality that your business may need in future. Your MFP is always ready to operate. You can print, copy and scan more materials, faster and remotely from wherever you are. The IM C300 is a high performance, durable and powerful A4 colour MFP and the first Ricoh A4 device to feature Ricoh 'Always current technology'.",
     highlights: [
-      { title: "Reduce Environmental Impact", text: "Smaller footprint with enhanced functionality while reducing plastic waste and energy consumption. Designed to deliver optimal performance in an eco-friendly and compact design." },
-      { title: "Smart Operation Panel", text: "10.1-inch Smart Operation Panel with soft-key operation, customisable home screen and full internet browser capability." },
-      { title: "Secure Your Data", text: "Devices fortified with a resilient operating system and up-to-date security features such as encryption, authentication, restricted print output access and data overwrite." },
+      { title: "Sustainable Performance", text: "Designed for eco-friendly performance, it features low power consumption, energy-saving modes and minimal heat emissions. With quiet operation for a comfortable workspace and auto-off timers to reduce energy use.", image: hlSustainabilityC300 },
+      { title: "Smart Operation Panel", text: "10.1-inch Smart Operation Panel with soft-key operation, customisable home screen and full internet browser capability.", image: hlSmartPanel },
+      { title: "Secure Your Data", text: "Devices fortified with a resilient operating system and up-to-date security features such as encryption, authentication, restricted print output access and data overwrite.", image: hlAlwaysOnSecurity },
     ],
     features: ["30 ppm Colour Print Speed", "Print, Copy, Scan", "Optional Fax", "1,200 × 1,200 dpi Resolution", "Up to 2,000 Sheets", "TEC 0.34 kWh/week"],
     specs: { "Print Speed": "30 ppm", "Resolution": "1,200 × 1,200 dpi", "Paper Size": "A4", "Functions": "Print, Copy, Scan, Optional Fax" },
@@ -275,9 +289,9 @@ export const printerProducts: Product[] = [
     description: "30 ppm A4 colour all-in-one with fax, 1,200 dpi, paper capacity up to 2,000 sheets, and 0.34 kWh TEC.",
     overview: "The IM C300F is an intelligent and powerful A4 colour MFP and the first Ricoh A4 device to feature Ricoh 'Always current technology' ensuring it will always utilise the most up-to-date technology. Designed to improve your workflow it effortlessly prints, copies, scans and faxes more materials, faster and remotely from wherever you are.",
     highlights: [
-      { title: "Sustainable Design", text: "Low power consumption, energy-saving modes and minimal heat emissions. Quiet operation for a comfortable workspace and auto-off timers to reduce energy use." },
-      { title: "Smart Device Connector", text: "Provides an easier and faster way to send documents for printing and collect scanned images using your Apple or NFC-compatible Android-based smart device." },
-      { title: "Always Current Technology", text: "Firmware delivered directly to your device, ensuring optimal efficiency and security. Add new apps without the need for new hardware." },
+      { title: "Sustainable Design", text: "Designed for eco-friendly performance, it features low power consumption, energy-saving modes and minimal heat emissions. With quiet operation for a comfortable workspace and auto-off timers to reduce energy use, it helps lower environmental impact.", image: hlSustainabilityC300 },
+      { title: "Ricoh Smart Device Connector", text: "Provides an easier and faster way to send documents for printing and collect scanned images using your Apple or NFC-compatible Android-based smart device. Quickly establish a secure connection without the need to register your device or join your organisation's network.", image: hlSmartDeviceConnector },
+      { title: "Ricoh Always Current Technology", text: "RICOH Always Current Technology is a firmware delivered directly to your device, ensuring optimal efficiency and security. With the ability to add new apps without the need for new hardware, you can expand your device capabilities and create a true digital workplace.", image: hlAlwaysCurrentTech },
     ],
     features: ["30 ppm Colour Print Speed", "Print, Copy, Scan, Fax", "1,200 × 1,200 dpi Resolution", "Up to 2,000 Sheets", "TEC 0.34 kWh/week", "Always Current Technology"],
     specs: { "Print Speed": "30 ppm", "Resolution": "1,200 × 1,200 dpi", "Paper Size": "A4", "Functions": "Print, Copy, Scan, Fax" },
@@ -303,10 +317,10 @@ export const printerProducts: Product[] = [
     description: "32 ppm A4 colour all-in-one with 60 ipm duplex scan, 7-inch Smart Operation Panel, and 0.30 kWh TEC.",
     overview: "The IM C320F All-in-one printer that offers high-quality printing, scanning, copying, and faxing. Designed to fit small spaces with a compact and sleek design that blends in with any office environment. It features low energy consumption and eco-friendly materials, making the IM C320F ideal for organisations that care about sustainability.",
     highlights: [
-      { title: "Compact & Powerful", text: "Space-saving solution with 32ppm single-sided and 16ppm double-sided print speed, plus enhanced scan speed of up to 60 ipm duplex for quick digitisation." },
-      { title: "Eco-Friendly Pioneer", text: "Over 50% post-consumer recycled plastic materials, 100% plastic-free toner packaging, and low TEC value of 0.30kWh. Blue Angel Mark certified." },
-      { title: "Always Current Technology", text: "Download the latest software updates and security patches directly to your device, ensuring it is always up to date, secure and performing at its best." },
-      { title: "Smart Operation Panel", text: "7-inch Smart Operation Panel with capacitive touch supporting RICOH Intelligent Support, Smart Integration, and Always Current Technology." },
+      { title: "Compact & Powerful", text: "Space-saving solution with 32ppm single-sided and 16ppm double-sided print speed, plus enhanced scan speed of up to 60 ipm duplex for quick digitisation.", image: hlSmallPowerful },
+      { title: "Eco-Friendly Pioneer", text: "Over 50% post-consumer recycled plastic materials, 100% plastic-free toner packaging, and low TEC value of 0.30kWh. Blue Angel Mark certified.", image: hlEcoDesign },
+      { title: "Always Current Technology", text: "Download the latest software updates and security patches directly to your device, ensuring it is always up to date, secure and performing at its best.", image: hlAlwaysCurrentTech },
+      { title: "Smart Operation Panel", text: "7-inch Smart Operation Panel with capacitive touch supporting RICOH Intelligent Support, Smart Integration, and Always Current Technology.", image: hlSmartPanelClose },
     ],
     features: ["32 ppm Print Speed", "16 ppm Duplex", "60 ipm Duplex Scan", "7\" Smart Operation Panel", "Always Current Technology", "TEC 0.30 kWh/week"],
     specs: { "Print Speed": "32 ppm (simplex) / 16 ppm (duplex)", "Resolution": "1,200 × 1,200 dpi", "Paper Size": "A4", "Functions": "Print, Copy, Scan, Fax" },
@@ -344,10 +358,10 @@ export const printerProducts: Product[] = [
     description: "40 ppm colour / 43 ppm B&W A4 all-in-one with 80 ipm duplex scan, 1,200 dpi, and 0.48 kWh TEC.",
     overview: "Experience cutting-edge technology with the IM C401F, designed to deliver exceptional performance and reliability. Whether you're a small business or a large enterprise, this A4 colour all-in-one intelligent device caters to all your printing needs with speed, efficiency and durability. Built for high-demand environments, the IM C401F ensures long-lasting performance and exceptional image quality.",
     highlights: [
-      { title: "Intuitive & Fast Performance", text: "Print at 40 ppm, rapid scanning at 80 ipm duplex, 6GB RAM for effortless multitasking, and built-in Wi-Fi for wireless printing from anywhere in the office." },
-      { title: "Energy-Efficient & Eco-Friendly", text: "TEC of 0.47kWh, reduced plastic packaging, up to 13% post-consumer recycled materials. Blue Angel Mark certified for highest sustainability standards." },
-      { title: "Smart Operation Panel", text: "10.1-inch Smart Operation Panel with user-friendly interface that simplifies navigation and streamlines workflows for enhanced productivity." },
-      { title: "Always-On Security", text: "Trusted Platform Module (TPM) 2.0 encrypts critical data. RICOH Always Current Technology ensures the latest security enhancements and firmware updates." },
+      { title: "Intuitive, Fast and Seamless Performance", text: "Enhance productivity with the IM C401F, designed for speed, efficiency and ease of use. Print at an impressive 40 pages per minute, reducing wait times and keeping workflows smooth. Enjoy rapid scanning at up to 80 images per minute (duplex), ensuring seamless document processing while 6GB RAM enables effortless multitasking.", image: hlIntuitivePerformance },
+      { title: "Energy-Efficient and Eco-Friendly Design", text: "Reduce your environmental impact with the IM C401F. This all-in-one consumes low energy, with a TEC range of just 0.47kWh reducing power usage. It includes a reduction in plastic packaging and uses up to 13% post-consumer recycled materials. Blue Angel Mark certified.", image: hlEcoDesign },
+      { title: "Intuitive Control at Your Fingertips", text: "Experience seamless device interaction with the 10.1-inch Smart Operation Panel. Its user-friendly interface simplifies navigation and streamlines workflows for enhanced productivity.", image: hlSmartPanelClose },
+      { title: "Always-On Security", text: "The IM C401F is built with robust security features to safeguard your sensitive information. Equipped with Trusted Platform Module (TPM) 2.0, it encrypts critical data and protects against cyber threats. RICOH Always Current Technology ensures continuous protection against emerging risks.", image: hlAlwaysOnSecurity },
     ],
     features: ["40 ppm Colour / 43 ppm B&W", "Print, Copy, Scan, Fax", "80 ipm Duplex Scan", "1,200 × 1,200 dpi Resolution", "TEC 0.48 kWh/week", "Smart Operation Panel"],
     specs: { "Print Speed": "40 ppm (colour) / 43 ppm (B&W)", "Resolution": "1,200 × 1,200 dpi", "Paper Size": "A4", "Functions": "Print, Copy, Scan, Fax" },
@@ -374,9 +388,9 @@ export const printerProducts: Product[] = [
     description: "40 ppm colour / 43 ppm B&W A4 all-in-one with staple finisher, 80 ipm duplex scan, and 0.48 kWh TEC.",
     overview: "Engineered to provide exceptional performance and reliability. Suitable for small businesses to large enterprises, this A4 colour all-in-one intelligent device meets all your printing requirements with speed, efficiency, and durability. Designed for high-demand environments, the IM C401SRF guarantees long-lasting performance and outstanding image quality with online finishing capability.",
     highlights: [
-      { title: "Continuous Security", text: "Utilising TPM 2.0 to encrypt critical data and defend against cyber threats. RICOH Always Current Technology ensures continuous protection against emerging risks." },
-      { title: "Eco-Friendly Colour Print", text: "TEC of 0.48kWh, reduced plastic packaging, up to 11% post-consumer recycled materials. Blue Angel Mark certified." },
-      { title: "Intuitive & Fast Performance", text: "40 ppm print speed with 80 ipm duplex scanning, 6GB RAM, built-in Wi-Fi and internal finisher staple option for streamlined document handling." },
+      { title: "Continuous Security", text: "Utilising TPM 2.0 to encrypt critical data and defend against cyber threats. RICOH Always Current Technology ensures continuous protection against emerging risks.", image: hlAlwaysOnSecurity },
+      { title: "Eco-Friendly Colour Print", text: "TEC of 0.48kWh, reduced plastic packaging, up to 11% post-consumer recycled materials. Blue Angel Mark certified.", image: hlEcoDesign },
+      { title: "Intuitive & Fast Performance", text: "40 ppm print speed with 80 ipm duplex scanning, 6GB RAM, built-in Wi-Fi and internal finisher staple option for streamlined document handling.", image: hlIntuitivePerformance },
     ],
     features: ["40 ppm Colour / 43 ppm B&W", "Built-in Staple Finisher", "Print, Copy, Scan, Fax", "80 ipm Duplex Scan", "1,200 × 1,200 dpi", "TEC 0.48 kWh/week"],
     specs: { "Print Speed": "40 ppm (colour) / 43 ppm (B&W)", "Resolution": "1,200 × 1,200 dpi", "Paper Size": "A4", "Functions": "Print, Copy, Scan, Fax" },
