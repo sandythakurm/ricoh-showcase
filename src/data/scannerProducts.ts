@@ -25,6 +25,11 @@ import imgFi7800 from "@/assets/scanners/fi-7800.png";
 import imgFi7900 from "@/assets/scanners/fi-7900.png";
 import type { Product } from "./products";
 
+// Highlight images
+import hlScanningWorkflow from "@/assets/scanners/highlights/scanning-workflow.jpg";
+import hlPaperstreamSoftware from "@/assets/scanners/highlights/paperstream-software.jpg";
+import hlNetworkConnectivity from "@/assets/scanners/highlights/network-connectivity.jpg";
+
 export const scannerProducts: Product[] = [
   // ── Workgroup Scanners ──────────────────────────────
   {
@@ -35,7 +40,11 @@ export const scannerProducts: Product[] = [
     brand: "ricoh",
     image: imgSp1120n,
     description: "Dependable, day-to-day scanning. 2nd generation SP Series designed for budget-conscious organisations taking their first steps towards structured scanning.",
-    overview: "The SP-1120N streamlines processes and delivers Organisational Intelligence. Digitising paper processes leads to lower costs and higher productivity. PaperStream software allows SP Series users to enjoy a premium capture experience, while Ricoh's heritage and market-leading technology give assurance of quality and dependable reliability.",
+    highlights: [
+      { title: "Streamlined Document Workflows", text: "The SP-1120N streamlines processes and delivers Organisational Intelligence. Digitising paper processes leads to lower costs and higher productivity, transforming the way your office handles documents.", image: hlScanningWorkflow },
+      { title: "PaperStream Capture Software", text: "PaperStream software allows SP Series users to enjoy a premium capture experience with automatic image clean-up, profile selection, and one-touch operation for effortless document digitisation.", image: hlPaperstreamSoftware },
+      { title: "Versatile Network Connectivity", text: "With Gigabit Ethernet and USB 3.2 connectivity, the SP-1120N integrates seamlessly into any office network. LAN support via PaperStream IPNet enables centralised scanner management.", image: hlNetworkConnectivity },
+    ],
     features: ["20ppm/40ipm Duplex Scanning", "Gigabit Ethernet & USB 3.2", "PaperStream IP & Capture Software", "Automatic Profile Selection", "Automatic Image Clean-up", "LAN Support via PaperStream IPNet", "One-touch Profile Operation", "Compact Desktop Design", "Plastic Card Scanning Support", "ABBYY FineReader Included"],
     specs: {
       "Scanner Type": "ADF, Duplex",
@@ -145,7 +154,11 @@ export const scannerProducts: Product[] = [
     brand: "ricoh",
     image: imgFi8040,
     description: "Feature-rich workgroup scanner with 4.3\" touchscreen, DirectScan PC-less scanning, and versatile LAN/USB connectivity for effortless quality capture.",
-    overview: "The fi-8040 combines market-leading image quality, versatile connectivity, and an intuitive 10.9cm colour touchscreen. Its DirectScan application enables PC-less scanning directly to workflows or email addresses, saving both time and effort. Clear Image Capture technology delivers industry-leading OCR accuracy rates.",
+    highlights: [
+      { title: "Effortless Quality Capture", text: "Clear Image Capture technology delivers industry-leading OCR accuracy rates. Combined with the 4.3-inch colour touchscreen, scanning becomes intuitive and efficient for any user.", image: hlScanningWorkflow },
+      { title: "DirectScan PC-Less Scanning", text: "The built-in DirectScan application enables scanning directly to workflows, email addresses, or network folders without needing a connected PC — saving both time and desk space.", image: hlPaperstreamSoftware },
+      { title: "Versatile Network Integration", text: "With Gigabit Ethernet and USB 3.2 connectivity, the fi-8040 integrates seamlessly into any office network. Scanner Central Admin enables centralised fleet management.", image: hlNetworkConnectivity },
+    ],
     features: ["40ppm/80ipm Duplex Scanning", "4.3\" LCD Touchscreen", "DirectScan PC-less Scanning", "Clear Image Capture Technology", "Gigabit Ethernet & USB 3.2", "PaperStream IP Net Support", "Ultrasonic Multi-Feed Detection", "50-sheet ADF Capacity", "Scanner Central Admin", "Mixed Document Handling"],
     specs: {
       "Scanner Type": "ADF, Duplex, Workgroup",
@@ -251,6 +264,11 @@ export const scannerProducts: Product[] = [
     image: imgFi8270,
     description: "70ppm ADF/Flatbed workgroup scanner combining high-speed feeding with flatbed versatility for maximum flexibility.",
     overview: "The fi-8270 is the flagship workgroup scanner, combining a blazing 70ppm ADF with a flatbed for ultimate flexibility. Handle everything from high-speed batch scanning to careful flatbed scanning of bound documents.",
+    highlights: [
+      { title: "Ultimate Workgroup Flexibility", text: "The fi-8270 combines a blazing 70ppm ADF with a flatbed for ultimate flexibility. Handle everything from high-speed batch scanning to careful flatbed scanning of bound documents.", image: hlScanningWorkflow },
+      { title: "Clear Image Capture Technology", text: "Industry-leading image quality powered by Clear Image Capture ensures the highest OCR accuracy rates. PaperStream software automates image clean-up for perfect results every time.", image: hlPaperstreamSoftware },
+      { title: "Dual Connectivity Options", text: "Gigabit Ethernet and USB 3.2 provide flexible connectivity for any network environment. Mixed batch scanning handles documents of varying sizes effortlessly.", image: hlNetworkConnectivity },
+    ],
     features: ["70ppm/140ipm ADF + Flatbed", "Duplex Scanning", "Gigabit Ethernet & USB 3.2", "Clear Image Capture", "PaperStream Software", "Mixed Batch Scanning"],
     specs: {
       "Scanner Type": "ADF + Flatbed, Duplex, Workgroup",
@@ -314,7 +332,11 @@ export const scannerProducts: Product[] = [
     brand: "ricoh",
     image: imgFi8190,
     description: "High-speed 90ppm departmental scanner redefining the standard for business scanning with Clear Image Capture technology.",
-    overview: "The fi-8190 redefines the standard for business scanning. With 90ppm speed and Clear Image Capture, it delivers exceptional image quality and industry-leading OCR accuracy rates. Designed for demanding departmental environments with high daily volumes.",
+    highlights: [
+      { title: "Redefining Business Scanning", text: "The fi-8190 redefines the standard for business scanning. With 90ppm speed and Clear Image Capture, it delivers exceptional image quality and industry-leading OCR accuracy rates for demanding departmental environments.", image: hlScanningWorkflow },
+      { title: "Intelligent Paper Protection", text: "Advanced paper protection technology including ultrasonic multi-feed detection prevents costly delays and document damage, ensuring reliable operation even with challenging document types.", image: hlPaperstreamSoftware },
+      { title: "Enterprise-Grade Connectivity", text: "Gigabit Ethernet and USB 3.2 connectivity with PaperStream software suite provides seamless integration into enterprise document workflows.", image: hlNetworkConnectivity },
+    ],
     features: ["90ppm/180ipm Duplex Scanning", "Clear Image Capture Technology", "Gigabit Ethernet & USB 3.2", "PaperStream Software Suite", "Ultrasonic Multi-Feed Detection", "Intelligent Paper Protection", "High Volume Capacity", "LED Light Source"],
     specs: {
       "Scanner Type": "ADF, Duplex, Departmental",
@@ -441,7 +463,11 @@ export const scannerProducts: Product[] = [
     brand: "ricoh",
     image: imgFi8950,
     description: "Flagship 150ppm A3 mid-volume production scanner. 750-sheet ADF, dual feed paths, and state-of-the-art paper protection for maximum throughput.",
-    overview: "The fi-8950 offers the performance, resilience, and usability to optimise productivity for high-volume scanning environments. At 150ppm with a 750-sheet ADF, it handles continuous scanning of large volumes. State-of-the-art paper protection including Stapled Documents Detection and Automatic Skew Correction prevent costly delays. Clear Image Capture delivers industry-leading OCR accuracy.",
+    highlights: [
+      { title: "Maximum Production Speed", text: "The fi-8950 offers 150ppm scanning with a 750-sheet ADF for continuous high-volume scanning. Designed for environments that demand maximum throughput and reliability day after day.", image: hlScanningWorkflow },
+      { title: "State-of-the-Art Paper Protection", text: "Stapled Document Detection, Automatic Skew Correction, and Intelligent Multi-Feed Function prevent costly delays and protect valuable documents during high-speed scanning.", image: hlPaperstreamSoftware },
+      { title: "Clear Image Capture Technology", text: "Industry-leading OCR accuracy powered by Clear Image Capture ensures every document is perfectly digitised. Dual CIS sensors capture both sides simultaneously at full speed.", image: hlNetworkConnectivity },
+    ],
     features: ["150ppm/300ipm Duplex Scanning", "750-sheet ADF Capacity", "A3 Document Support", "U-turn & Straight-through Paths", "USB 3.2 & Gigabit LAN", "Clear Image Capture Technology", "Stapled Document Detection", "Automatic Skew Correction", "Intelligent Multi-Feed Function", "4.3\" LCD Touchscreen", "Post-Imprinting Options", "23kg Transportable Design", "105° Wide Opening for Maintenance"],
     specs: {
       "Scanner Type": "ADF, Duplex, Mid-Volume Production",

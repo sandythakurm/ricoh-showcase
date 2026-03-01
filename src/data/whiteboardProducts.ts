@@ -12,22 +12,32 @@ import imgA8610Side from "@/assets/whiteboards/a8610-side.webp";
 import imgA8610Detail from "@/assets/whiteboards/a8610-detail.webp";
 import imgA8610Back from "@/assets/whiteboards/a8610-back.webp";
 
+// Highlight images
+import hlProductivity from "@/assets/whiteboards/highlights/productivity.jpg";
+import hlCollaboration from "@/assets/whiteboards/highlights/collaboration.jpg";
+import hlCustomisation from "@/assets/whiteboards/highlights/customisation.jpg";
+import hlEcoFriendly from "@/assets/whiteboards/highlights/eco-friendly.jpg";
+
 const sharedHighlights = [
   {
     title: "Enhance Productivity",
     text: "The RICOH IWB A Series simplifies business workflows, allowing employees to focus on essential tasks and save time with easy-to-use features. IWBs integrate with productivity tools, improving project management and reducing miscommunication. In classrooms, IWBs engage students with interactive lessons and instant feedback.",
+    image: hlProductivity,
   },
   {
     title: "Empower Collaboration",
     text: "Share screen images and annotations in real-time so team members can collaborate more effectively, regardless of their location. The interactive features make it easier to communicate ideas visually, leading to more dynamic and productive meetings.",
+    image: hlCollaboration,
   },
   {
     title: "Customise Your Environment",
     text: "Ricoh's open architecture allows businesses to customise and integrate the whiteboard into their existing systems, ensuring it fits perfectly within the company's IT ecosystem — from small meeting rooms to large conference spaces.",
+    image: hlCustomisation,
   },
   {
     title: "Reduce Environmental Impact",
     text: "Interactive whiteboards offer a sustainable alternative to traditional paper-based methods by digitising lessons and notes, significantly reducing paper consumption. RICOH Interactive whiteboards are designed with energy efficiency in mind.",
+    image: hlEcoFriendly,
   },
 ];
 
