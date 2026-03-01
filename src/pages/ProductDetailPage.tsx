@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
 import { getProductById, getProductsByCategory } from "@/data/products";
 import ProductCard from "@/components/ProductCard";
+import ProductHighlights from "@/components/ProductHighlights";
 import {
   Accordion,
   AccordionContent,
@@ -151,31 +152,9 @@ const ProductDetailPage = () => {
         </section>
       )}
 
-      {/* Highlights */}
+      {/* Highlights - Alternating Image/Text Layout */}
       {product.highlights && product.highlights.length > 0 && (
-        <section className="py-14 bg-surface-warm">
-          <div className="container">
-            <h2 className="text-2xl md:text-3xl font-heading font-bold mb-8 text-center">Why Choose This Product</h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {product.highlights.map((h, i) => (
-                <motion.div
-                  key={h.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className="bg-card border rounded-2xl p-6"
-                >
-                  <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4">
-                    {highlightIcons[h.title] || <Check className="h-5 w-5" />}
-                  </div>
-                  <h3 className="font-heading font-semibold mb-2">{h.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{h.text}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <ProductHighlights highlights={product.highlights} />
       )}
 
       {/* Specifications - Grouped Accordion Style */}
