@@ -16,8 +16,10 @@ export interface Product {
   subcategory?: string;
   brand: string;
   image: string;
+  gallery?: string[];
   description: string;
   overview?: string;
+  highlights?: { title: string; text: string; image?: string }[];
   features: string[];
   specs: Record<string, string>;
   warranty?: string;
