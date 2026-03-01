@@ -9,6 +9,10 @@ import { products, categories, brands } from "@/data/products";
 import { Search } from "lucide-react";
 
 const subcategoriesMap: Record<string, { id: string; name: string }[]> = {
+  printers: [
+    { id: "B&W A4", name: "B&W A4" },
+    { id: "Colour A4", name: "Colour A4" },
+  ],
   scanners: [
     { id: "Workgroup", name: "Workgroup" },
     { id: "Departmental", name: "Departmental" },
