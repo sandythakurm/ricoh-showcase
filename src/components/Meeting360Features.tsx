@@ -131,18 +131,17 @@ const Meeting360Features = () => {
           </motion.h2>
         </div>
         {featureHighlights.map((feature, i) => {
-          const isReversed = i % 2 !== 0;
           return (
             <div
               key={feature.title}
               className={`grid lg:grid-cols-2 min-h-[360px] ${i % 2 === 0 ? "bg-surface-warm" : "bg-background"}`}
             >
-              {/* Media */}
+              {/* Media - always left */}
               <motion.div
-                initial={{ opacity: 0, x: isReversed ? 20 : -20 }}
+                initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className={`relative min-h-[280px] lg:min-h-0 ${isReversed ? "lg:order-2" : ""}`}
+                className="relative min-h-[280px] lg:min-h-0"
               >
                 {"video" in feature && feature.video ? (
                   <iframe
@@ -160,12 +159,12 @@ const Meeting360Features = () => {
                   />
                 )}
               </motion.div>
-              {/* Text */}
+              {/* Text - always right */}
               <motion.div
-                initial={{ opacity: 0, x: isReversed ? -20 : 20 }}
+                initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className={`flex flex-col justify-center px-8 md:px-16 lg:px-20 py-14 ${isReversed ? "lg:order-1" : ""}`}
+                className="flex flex-col justify-center px-8 md:px-16 lg:px-20 py-14"
               >
                 <div className="w-10 h-1 bg-primary mb-5" />
                 <h3 className="text-2xl md:text-3xl font-heading font-bold mb-4">{feature.title}</h3>
