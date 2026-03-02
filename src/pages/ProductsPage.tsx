@@ -1,6 +1,7 @@
 import { useState, useMemo } from "react";
 import { useSearchParams, Link } from "react-router-dom";
 import ricohLogo from "@/assets/ricoh-logo.png";
+import heroBg from "@/assets/hero-bg.jpg";
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -52,9 +53,10 @@ const ProductsPage = () => {
     <div className="min-h-screen">
       <Header />
       {/* Ricoh Brand Banner */}
-      <section className="relative overflow-hidden bg-ricoh-dark py-10">
-        <div className="absolute inset-0 bg-gradient-to-r from-ricoh-dark via-ricoh-dark/90 to-primary/20" />
-        <div className="container relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+      <section className="relative overflow-hidden bg-ricoh-dark min-h-[260px] md:min-h-[300px] flex items-center">
+        <img src={heroBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-r from-ricoh-dark/95 via-ricoh-dark/85 to-ricoh-dark/50" />
+        <div className="container relative z-10 flex flex-col md:flex-row items-center justify-between gap-8 py-10">
           <div>
             <motion.p
               initial={{ opacity: 0, y: 10 }}
@@ -71,11 +73,19 @@ const ProductsPage = () => {
             >
               Explore Our <span className="text-primary">Product Catalog</span>
             </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="text-primary-foreground/60 mt-3 max-w-md"
+            >
+              Browse printers, scanners, projectors, whiteboards and more from world-class brands.
+            </motion.p>
           </div>
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.1 }}
+            transition={{ delay: 0.15 }}
           >
             <Link
               to="/products?brand=ricoh"
