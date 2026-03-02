@@ -5,11 +5,13 @@ import productWhiteboard from "@/assets/product-whiteboard.jpg";
 import productMeeting from "@/assets/product-meeting.jpg";
 import productLaptop from "@/assets/product-laptop.jpg";
 import productSublimation from "@/assets/product-sublimation.jpg";
+import productMonitor from "@/assets/product-monitor.jpg";
 import { scannerProducts } from "./scannerProducts";
 import { projectorProducts } from "./projectorProducts";
 import { whiteboardProducts } from "./whiteboardProducts";
 import { printerProducts } from "./printerProducts";
 import { meetingProducts } from "./meetingProducts";
+import { monitorProducts } from "./monitorProducts";
 
 export interface Product {
   id: string;
@@ -39,6 +41,7 @@ export const categories = [
   { id: "projectors", name: "Projectors", image: productProjector },
   { id: "whiteboards", name: "Interactive Whiteboards", image: productWhiteboard },
   { id: "smart-meeting", name: "Smart Meeting", image: productMeeting },
+  { id: "portable-monitors", name: "Portable Monitors", image: productMonitor },
   { id: "laptops", name: "Laptops", image: productLaptop },
   { id: "sublimation", name: "Sublimation", image: productSublimation },
 ];
@@ -66,6 +69,8 @@ export const products: Product[] = [
   ...whiteboardProducts,
   // Smart Meeting products
   ...meetingProducts,
+  // Portable Monitor products
+  ...monitorProducts,
 ];
 
 export const getProductsByCategory = (categoryId: string) =>
