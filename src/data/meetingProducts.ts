@@ -15,11 +15,6 @@ export const meetingProducts: Product[] = [
     overview: "The RICOH Meeting 360 is a 3-in-1 video conferencing camera designed to enhance hybrid meetings with an immersive 360° experience. Dual high-resolution panoramic cameras ensure everyone is visible, while an omnidirectional microphone array and integrated 360° speakers deliver crystal-clear audio for all participants. Advanced speech detection automatically focuses on and highlights active speakers, giving everyone a seat at the table. With a lightweight, plug-and-play design, Meeting 360 is the flexible solution for effortless collaboration—anytime, anywhere.",
     highlights: [
       {
-        title: "Immersive 360° Video",
-        text: "Dual high-resolution panoramic cameras capture the entire room in stunning clarity, making every meeting more engaging and inclusive. 360° panoramic video ensures remote attendees never miss a thing.",
-        image: productMeeting,
-      },
-      {
         title: "Crystal-Clear Audio",
         text: "A powerful omnidirectional microphone array captures voices up to 20 feet away, while three 8W speakers ensure remote participants sound as if they're in the room. Hear every voice clearly.",
       },
