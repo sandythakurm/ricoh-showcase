@@ -97,6 +97,11 @@ const ProductDetailPage = () => {
         </section>
       )}
 
+      {/* Portable Monitor Hero Banner */}
+      {(product.id === "pm-150" || product.id === "pm-150bw") && (
+        <MonitorAwardsSection />
+      )}
+
       {/* Hero: Image + Key Info */}
       <section className="py-10 bg-surface-warm">
         <div className="container">
@@ -227,10 +232,8 @@ const ProductDetailPage = () => {
         <MonitorFlexibilitySection />
       )}
 
-      {/* Portable Monitor Awards Section */}
-      {(product.id === "pm-150" || product.id === "pm-150bw") && (
-        <MonitorAwardsSection />
-      )}
+
+
 
       {/* Specifications - Grouped Accordion Style */}
       {hasGroupedSpecs && (
