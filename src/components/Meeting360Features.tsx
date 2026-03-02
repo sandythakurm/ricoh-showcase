@@ -134,42 +134,46 @@ const Meeting360Features = () => {
           return (
             <div
               key={feature.title}
-              className={`grid lg:grid-cols-2 min-h-[360px] ${i % 2 === 0 ? "bg-surface-warm" : "bg-background"}`}
+              className={`${i % 2 === 0 ? "bg-surface-warm" : "bg-background"} py-10`}
             >
-              {/* Media - always left */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="relative min-h-[280px] lg:min-h-0"
-              >
-                {"video" in feature && feature.video ? (
-                  <iframe
-                    src={feature.video}
-                    title={feature.title}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="absolute inset-0 w-full h-full"
-                  />
-                ) : "image" in feature ? (
-                  <img
-                    src={(feature as any).image}
-                    alt={feature.title}
-                    className="absolute inset-0 w-full h-full object-cover"
-                  />
-                ) : null}
-              </motion.div>
-              {/* Text - always right */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="flex flex-col justify-center px-8 md:px-16 lg:px-20 py-14"
-              >
-                <div className="w-10 h-1 bg-primary mb-5" />
-                <h3 className="text-2xl md:text-3xl font-heading font-bold mb-4">{feature.title}</h3>
-                <p className="text-muted-foreground leading-relaxed max-w-md">{feature.text}</p>
-              </motion.div>
+              <div className="container">
+                <div className="grid lg:grid-cols-2 gap-10 items-center">
+                  {/* Media - always left */}
+                  <motion.div
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    className="relative aspect-video rounded-xl overflow-hidden"
+                  >
+                    {"video" in feature && feature.video ? (
+                      <iframe
+                        src={feature.video}
+                        title={feature.title}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="absolute inset-0 w-full h-full"
+                      />
+                    ) : "image" in feature ? (
+                      <img
+                        src={(feature as any).image}
+                        alt={feature.title}
+                        className="absolute inset-0 w-full h-full object-cover"
+                      />
+                    ) : null}
+                  </motion.div>
+                  {/* Text - always right */}
+                  <motion.div
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    className="flex flex-col justify-center"
+                  >
+                    <div className="w-10 h-1 bg-primary mb-5" />
+                    <h3 className="text-2xl md:text-3xl font-heading font-bold mb-4">{feature.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed max-w-md">{feature.text}</p>
+                  </motion.div>
+                </div>
+              </div>
             </div>
           );
         })}
