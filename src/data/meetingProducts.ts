@@ -1,5 +1,5 @@
 import type { Product } from "./products";
-import imgMeeting360 from "@/assets/meeting/meeting-360.png";
+import imgMeeting360 from "@/assets/meeting/meeting-360.jpg";
 import productMeeting from "@/assets/product-meeting.jpg";
 
 export const meetingProducts: Product[] = [
