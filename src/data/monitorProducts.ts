@@ -1,6 +1,6 @@
 import type { Product } from "./products";
-import pm150 from "@/assets/monitors/pm-150.jpg";
-import pm150bw from "@/assets/monitors/pm-150bw.jpg";
+import pm150 from "@/assets/monitors/pm-150-official.webp";
+import pm150bw from "@/assets/monitors/pm-150-official.webp";
 import stylusPen from "@/assets/monitors/stylus-pen.jpg";
 import highlightUltralight from "@/assets/monitors/highlights/ultralight.jpg";
 import highlightVivid from "@/assets/monitors/highlights/vivid-picture.jpg";
