@@ -1,4 +1,4 @@
-import ricohLogo from "@/assets/ricoh-logo.png";
+import ricohLogo from "@/assets/ricoh-logo-partner.png";
 
 const ServicesBar = () => (
   <section className="bg-primary py-6">
