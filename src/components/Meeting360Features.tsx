@@ -43,9 +43,8 @@ const Meeting360Features = () => {
     <>
       {/* A Smarter Way to Meet */}
       <section className="relative overflow-hidden bg-muted/30">
-        <div className="grid lg:grid-cols-2 min-h-[580px]">
-          {/* Text side */}
-          <div className="flex flex-col justify-center px-8 md:px-16 lg:px-20 py-14">
+        <div className="container py-14">
+          <div className="max-w-3xl">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -54,7 +53,7 @@ const Meeting360Features = () => {
             >
               A smarter way to meet
             </motion.h2>
-            <div className="space-y-10">
+            <div className="grid sm:grid-cols-2 gap-10">
               {smarterFeatures.map((feature, i) => (
                 <motion.div
                   key={feature.title}
@@ -64,18 +63,10 @@ const Meeting360Features = () => {
                   transition={{ delay: i * 0.1 }}
                 >
                   <h3 className="font-heading font-bold text-lg mb-1.5">{feature.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed max-w-md">{feature.text}</p>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{feature.text}</p>
                 </motion.div>
               ))}
             </div>
-          </div>
-          {/* Image side */}
-          <div className="relative min-h-[350px] lg:min-h-0">
-            <img
-              src={smarterMeetingImg}
-              alt="Team using RICOH Meeting 360 in conference room"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
           </div>
         </div>
       </section>
