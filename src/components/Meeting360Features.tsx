@@ -27,7 +27,7 @@ const featureHighlights = [
   {
     title: "Active speaker focus",
     text: "Meeting 360 quickly and accurately identifies and displays those who are actively speaking.",
-    image: activeSpeakerImg,
+    video: "https://www.youtube.com/embed/K9FAjKlIN7g?rel=0&start=17",
   },
   {
     title: "Flexible screen layouts",
@@ -146,18 +146,28 @@ const Meeting360Features = () => {
               key={feature.title}
               className={`grid lg:grid-cols-2 min-h-[360px] ${i % 2 === 0 ? "bg-surface-warm" : "bg-background"}`}
             >
-              {/* Image */}
+              {/* Media */}
               <motion.div
                 initial={{ opacity: 0, x: isReversed ? 20 : -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 className={`relative min-h-[280px] lg:min-h-0 ${isReversed ? "lg:order-2" : ""}`}
               >
-                <img
-                  src={feature.image}
-                  alt={feature.title}
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
+                {"video" in feature && feature.video ? (
+                  <iframe
+                    src={feature.video}
+                    title={feature.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="absolute inset-0 w-full h-full"
+                  />
+                ) : (
+                  <img
+                    src={feature.image}
+                    alt={feature.title}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                )}
               </motion.div>
               {/* Text */}
               <motion.div
