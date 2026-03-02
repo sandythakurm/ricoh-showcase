@@ -2,9 +2,13 @@ import type { Product } from "./products";
 import pm150 from "@/assets/monitors/pm-150-official.webp";
 import pm150bw from "@/assets/monitors/pm-150-official.webp";
 import stylusPen from "@/assets/monitors/stylus-pen.jpg";
-import highlightUltralight from "@/assets/monitors/highlights/ultralight.jpg";
-import highlightVivid from "@/assets/monitors/highlights/vivid-picture.jpg";
-import highlightWireless from "@/assets/monitors/highlights/wireless-connectivity.jpg";
+import dancerFront from "@/assets/monitors/gallery/dancer-front.jpg";
+import oledVideo from "@/assets/monitors/gallery/oled-video.jpg";
+import pm150bwMain from "@/assets/monitors/gallery/pm150bw-main.jpg";
+import tilePerformance from "@/assets/monitors/gallery/tile-performance.jpg";
+import tilePortable from "@/assets/monitors/gallery/tile-portable.jpg";
+import tileWireless from "@/assets/monitors/gallery/tile-wireless.jpg";
+import tileVivid from "@/assets/monitors/gallery/tile-vivid.jpg";
 
 export const monitorProducts: Product[] = [
   {
@@ -14,7 +18,7 @@ export const monitorProducts: Product[] = [
     subcategory: "Wired",
     brand: "ricoh",
     image: pm150,
-    gallery: [pm150],
+    gallery: [pm150, dancerFront, oledVideo, tilePerformance, tileVivid],
     tagline: "World's lightest 15.6\" OLED touchscreen portable monitor",
     description:
       "Ultra-light, high-performance 15.6\" OLED portable monitor with 10-point touch. Weighing just 1.23lb, it's the world's lightest touchscreen portable monitor in its class.",
@@ -24,17 +28,17 @@ export const monitorProducts: Product[] = [
       {
         title: "Ultra-lightweight and portable",
         text: "The lightest 15.6\" touchscreen portable monitor on the market at just 1.23lb. At only 0.19\" at its slimmest section, it takes up very little bag space.",
-        image: highlightUltralight,
+        image: tilePortable,
       },
       {
         title: "Vivid OLED picture quality",
         text: "15.6\" OLED screen with full HD for higher brightness, better contrast, and a rapid response time — as low as 1ms. Plus a 10-point touch display to adapt to any task.",
-        image: highlightVivid,
+        image: tileVivid,
       },
       {
         title: "Wide range of connectivity",
         text: "2 USB-C connections for easy wired access to Windows, MacOS, iOS, and Android devices. Simple plug-and-play setup for instant dual-screen productivity.",
-        image: highlightWireless,
+        image: tileWireless,
       },
     ],
     features: [
@@ -93,7 +97,7 @@ export const monitorProducts: Product[] = [
     subcategory: "Wireless",
     brand: "ricoh",
     image: pm150bw,
-    gallery: [pm150bw],
+    gallery: [pm150bw, pm150bwMain, dancerFront, tilePerformance, tileWireless],
     tagline: "Wireless 15.6\" OLED touchscreen portable monitor",
     description:
       "Wireless portable monitor with 15.6\" OLED display and 10-point touch. Connect wirelessly via Miracast or wired via USB-C. Multicast to up to 5 monitors simultaneously.",
@@ -103,17 +107,17 @@ export const monitorProducts: Product[] = [
       {
         title: "Ultra-lightweight and portable",
         text: "Among the lightest wireless touchscreen portable monitors at just 1.58lb. Ultra-slim 5mm profile with integrated kickstand and built-in speakers.",
-        image: highlightUltralight,
+        image: tilePortable,
       },
       {
         title: "Vivid OLED picture quality",
         text: "15.6\" OLED screen with full HD for higher brightness, better contrast, and a rapid response time — as low as 1ms. Plus a 10-point touch display to adapt to any task.",
-        image: highlightVivid,
+        image: tileVivid,
       },
       {
         title: "Wireless & wired connectivity",
         text: "2 USB-C connections plus Miracast wireless. Handle up to 2 devices on 1 monitor and wirelessly multicast up to 5 150BW portable monitors at a time.",
-        image: highlightWireless,
+        image: tileWireless,
       },
     ],
     features: [
