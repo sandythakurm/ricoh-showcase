@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import smarterMeetingImg from "@/assets/meeting/highlights/smarter-meeting.jpg";
 import activeSpeakerImg from "@/assets/meeting/highlights/active-speaker.jpg";
 import flexibleLayoutsImg from "@/assets/meeting/highlights/flexible-layouts.jpg";
-import multiPlatformImg from "@/assets/meeting/highlights/multi-platform-hero.jpg";
+import multiPlatformImg from "@/assets/meeting/highlights/multi-platform-hero.png";
 
 const smarterFeatures = [
   {
