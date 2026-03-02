@@ -19,6 +19,8 @@ export interface Product {
   image: string;
   gallery?: string[];
   description: string;
+  tagline?: string;
+  colorType?: "bw" | "color";
   overview?: string;
   highlights?: { title: string; text: string; image?: string }[];
   features: string[];

@@ -54,7 +54,7 @@ const ProductsPage = () => {
       <Header />
       {/* Category Banner */}
       <section className="relative overflow-hidden bg-ricoh-dark min-h-[260px] md:min-h-[300px] flex items-center">
-        {/* Background: Vimeo video for scanners, image for others */}
+        {/* Background: Vimeo video for scanners, local video for printers, image for others */}
         {selectedCategory === "scanners" ? (
           <div className="absolute inset-0 w-full h-full">
             <iframe
@@ -64,6 +64,17 @@ const ProductsPage = () => {
               allow="autoplay"
               frameBorder="0"
               title="Ricoh fi-Series Scanners"
+            />
+          </div>
+        ) : selectedCategory === "printers" ? (
+          <div className="absolute inset-0 w-full h-full">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover"
+              src="/videos/ricoh-promo.mp4"
             />
           </div>
         ) : (
@@ -91,6 +102,8 @@ const ProductsPage = () => {
             >
               {selectedCategory === "scanners" ? (
                 <>Ricoh <span className="text-primary">Document Scanners</span></>
+              ) : selectedCategory === "printers" ? (
+                <>Ricoh <span className="text-primary">Printers & Copiers</span></>
               ) : (
                 <>Explore Our <span className="text-primary">Product Catalog</span></>
               )}
@@ -104,6 +117,8 @@ const ProductsPage = () => {
             >
               {selectedCategory === "scanners"
                 ? "Efficient workflows. Scalable productivity. Industry-leading fi Series scanners for every business need."
+                : selectedCategory === "printers"
+                ? "Color and black-and-white printers and multifunction devices with security, efficiency, and sustainability built in."
                 : "Browse printers, scanners, projectors, whiteboards and more from world-class brands."}
             </motion.p>
           </div>
