@@ -10,6 +10,7 @@ import { getProductById, getProductsByCategory } from "@/data/products";
 import ProductCard from "@/components/ProductCard";
 import ProductHighlights from "@/components/ProductHighlights";
 import Meeting360Features from "@/components/Meeting360Features";
+import MonitorFlexibilitySection from "@/components/MonitorFlexibilitySection";
 import {
   Accordion,
   AccordionContent,
@@ -218,6 +219,11 @@ const ProductDetailPage = () => {
       {/* Highlights - Alternating Image/Text Layout */}
       {product.highlights && product.highlights.length > 0 && (
         <ProductHighlights highlights={product.highlights} />
+      )}
+
+      {/* Portable Monitor Flexibility Section */}
+      {(product.id === "pm-150" || product.id === "pm-150bw") && (
+        <MonitorFlexibilitySection />
       )}
 
       {/* Specifications - Grouped Accordion Style */}
