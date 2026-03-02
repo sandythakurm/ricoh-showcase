@@ -9,6 +9,7 @@ import { scannerProducts } from "./scannerProducts";
 import { projectorProducts } from "./projectorProducts";
 import { whiteboardProducts } from "./whiteboardProducts";
 import { printerProducts } from "./printerProducts";
+import { meetingProducts } from "./meetingProducts";
 
 export interface Product {
   id: string;
@@ -63,6 +64,8 @@ export const products: Product[] = [
   ...scannerProducts,
   // Whiteboard products
   ...whiteboardProducts,
+  // Smart Meeting products
+  ...meetingProducts,
 ];
 
 export const getProductsByCategory = (categoryId: string) =>
