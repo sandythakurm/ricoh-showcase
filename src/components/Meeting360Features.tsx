@@ -32,7 +32,7 @@ const featureHighlights = [
   {
     title: "Flexible screen layouts",
     text: "Effortlessly switch between multiple screen layouts with a simple tap, adjusting views to fit your team's needs.",
-    image: flexibleLayoutsImg,
+    video: "https://www.youtube.com/embed/K9FAjKlIN7g?rel=0&start=30",
   },
 ];
 
@@ -151,13 +151,13 @@ const Meeting360Features = () => {
                     allowFullScreen
                     className="absolute inset-0 w-full h-full"
                   />
-                ) : (
+                ) : "image" in feature ? (
                   <img
-                    src={feature.image}
+                    src={(feature as any).image}
                     alt={feature.title}
                     className="absolute inset-0 w-full h-full object-cover"
                   />
-                )}
+                ) : null}
               </motion.div>
               {/* Text - always right */}
               <motion.div
