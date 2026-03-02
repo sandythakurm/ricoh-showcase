@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, Mail, Phone, Check, ChevronRight, ChevronDown, Zap, Users, Settings, Leaf } from "lucide-react";
+import meeting360HeroImg from "@/assets/meeting/meeting-360-hero.png";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
@@ -64,6 +65,35 @@ const ProductDetailPage = () => {
           </div>
         </div>
       </div>
+
+      {/* Meeting 360 Hero Banner */}
+      {product.id === "meeting-360" && (
+        <section className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden">
+          <img
+            src={meeting360HeroImg}
+            alt="RICOH Meeting 360 in a conference room"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/70 to-transparent" />
+          <div className="relative container h-full flex flex-col justify-end pb-12">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground max-w-xl mb-3"
+            >
+              Introducing the hardest-working meeting assistant
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="text-muted-foreground text-lg max-w-lg"
+            >
+              Meet RICOH Meeting 360 – an intelligent 3-in-1 video conferencing camera that keeps teams connected, engaged, and focused.
+            </motion.p>
+          </div>
+        </section>
+      )}
 
       {/* Hero: Image + Key Info */}
       <section className="py-10 bg-surface-warm">
