@@ -47,25 +47,19 @@ const ProductCard = ({ product }: { product: Product }) => (
       )}
     </div>
     <div className="p-5">
-      {product.brand === "ricoh" ? (
-        <div className="flex items-center gap-2 mb-1">
-          <img src={ricohLogo} alt="Ricoh" className="h-6 shrink-0" />
+      <div className="flex items-center justify-between gap-2 mb-1">
+        <div className="flex items-center gap-2 min-w-0">
           {product.colorType && <ColorIcon type={product.colorType} />}
           <h3 className="font-heading font-semibold text-foreground line-clamp-1 group-hover:text-primary transition-colors">
             {product.name}
           </h3>
         </div>
-      ) : (
-        <>
-          <p className="text-xs font-medium text-primary uppercase tracking-wider mb-1">{product.brand}</p>
-          <div className="flex items-center gap-2 mb-1">
-            {product.colorType && <ColorIcon type={product.colorType} />}
-            <h3 className="font-heading font-semibold text-foreground line-clamp-2 group-hover:text-primary transition-colors">
-              {product.name}
-            </h3>
-          </div>
-        </>
-      )}
+        {product.brand === "ricoh" ? (
+          <img src={ricohLogo} alt="Ricoh" className="h-5 shrink-0" />
+        ) : (
+          <span className="text-xs font-medium text-primary uppercase tracking-wider shrink-0">{product.brand}</span>
+        )}
+      </div>
       {product.tagline && (
         <p className="text-xs text-muted-foreground mb-2">{product.tagline}</p>
       )}
