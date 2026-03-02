@@ -32,7 +32,7 @@ const featureHighlights = [
   {
     title: "Flexible screen layouts",
     text: "Effortlessly switch between multiple screen layouts with a simple tap, adjusting views to fit your team's needs.",
-    video: "https://www.youtube.com/embed/K9FAjKlIN7g?rel=0&start=30",
+    image: "https://www.pfu-us.ricoh.com/-/media/project/scanners/promos/meeting-360/32screenlayoutoptionsrevised.gif?h=324&iar=0&w=576&hash=01BC0D1D57A918169665F1E7D30D1BA4",
   },
 ];
 
