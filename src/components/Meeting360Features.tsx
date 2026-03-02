@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Eye, Mic, UserCheck, Usb } from "lucide-react";
 import smarterMeetingImg from "@/assets/meeting/highlights/smarter-meeting.jpg";
 import activeSpeakerImg from "@/assets/meeting/highlights/active-speaker.jpg";
 import flexibleLayoutsImg from "@/assets/meeting/highlights/flexible-layouts.jpg";
@@ -7,22 +6,18 @@ import multiPlatformImg from "@/assets/meeting/highlights/multi-platform-hero.jp
 
 const smarterFeatures = [
   {
-    icon: <Eye className="h-5 w-5 text-primary" />,
     title: "See the whole room",
     text: "360° panoramic video ensures remote attendees never miss a thing.",
   },
   {
-    icon: <Mic className="h-5 w-5 text-primary" />,
     title: "Hear every voice",
     text: "Omnidirectional audio captures and projects every voice clearly, making remote participants feel like they're in the room.",
   },
   {
-    icon: <UserCheck className="h-5 w-5 text-primary" />,
     title: "Always know who's speaking",
     text: "Meeting 360 intelligently identifies and highlights active speakers as the conversation flows.",
   },
   {
-    icon: <Usb className="h-5 w-5 text-primary" />,
     title: "Start meetings on time",
     text: "USB-C connectivity simplifies setup—just connect and start collaborating.",
   },
@@ -47,19 +42,19 @@ const Meeting360Features = () => {
   return (
     <>
       {/* A Smarter Way to Meet */}
-      <section className="relative overflow-hidden">
-        <div className="grid lg:grid-cols-2 min-h-[500px]">
+      <section className="relative overflow-hidden bg-muted/30">
+        <div className="grid lg:grid-cols-2 min-h-[580px]">
           {/* Text side */}
-          <div className="flex flex-col justify-center px-8 md:px-16 lg:px-20 py-14 bg-background">
+          <div className="flex flex-col justify-center px-8 md:px-16 lg:px-20 py-14">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-3xl md:text-4xl font-heading font-bold mb-10"
+              className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-12"
             >
               A smarter way to meet
             </motion.h2>
-            <div className="space-y-8">
+            <div className="space-y-10">
               {smarterFeatures.map((feature, i) => (
                 <motion.div
                   key={feature.title}
@@ -68,25 +63,19 @@ const Meeting360Features = () => {
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
                 >
-                  <div className="flex items-start gap-3">
-                    <div className="mt-0.5 shrink-0">{feature.icon}</div>
-                    <div>
-                      <h3 className="font-heading font-bold text-lg mb-1">{feature.title}</h3>
-                      <p className="text-muted-foreground text-sm leading-relaxed max-w-md">{feature.text}</p>
-                    </div>
-                  </div>
+                  <h3 className="font-heading font-bold text-lg mb-1.5">{feature.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed max-w-md">{feature.text}</p>
                 </motion.div>
               ))}
             </div>
           </div>
           {/* Image side */}
-          <div className="relative min-h-[300px] lg:min-h-0">
+          <div className="relative min-h-[350px] lg:min-h-0">
             <img
               src={smarterMeetingImg}
               alt="Team using RICOH Meeting 360 in conference room"
               className="absolute inset-0 w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-background/30 to-transparent lg:from-background/10" />
           </div>
         </div>
       </section>
