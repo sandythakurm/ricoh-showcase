@@ -52,34 +52,59 @@ const ProductsPage = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      {/* Ricoh Brand Banner */}
+      {/* Category Banner */}
       <section className="relative overflow-hidden bg-ricoh-dark min-h-[260px] md:min-h-[300px] flex items-center">
-        <img src={heroBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+        {/* Background: Vimeo video for scanners, image for others */}
+        {selectedCategory === "scanners" ? (
+          <div className="absolute inset-0 w-full h-full">
+            <iframe
+              src="https://player.vimeo.com/video/904120943?autoplay=1&background=1&loop=1&muted=1&controls=0"
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78vh] min-w-full min-h-full"
+              style={{ aspectRatio: "16/9" }}
+              allow="autoplay"
+              frameBorder="0"
+              title="Ricoh fi-Series Scanners"
+            />
+          </div>
+        ) : (
+          <img src={heroBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+        )}
         <div className="absolute inset-0 bg-gradient-to-r from-ricoh-dark/95 via-ricoh-dark/85 to-ricoh-dark/50" />
         <div className="container relative z-10 flex flex-col md:flex-row items-center justify-between gap-8 py-10">
           <div>
-            <motion.p
+            <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-primary text-sm font-medium tracking-wide uppercase mb-2"
+              className="flex items-center gap-3 mb-3"
             >
-              Official Authorized Distributor — MEA & Africa
-            </motion.p>
+              <img src={ricohLogo} alt="Ricoh" className="h-8" />
+              <span className="text-primary text-sm font-medium tracking-wide uppercase">
+                Official Authorized Distributor — MEA & Africa
+              </span>
+            </motion.div>
             <motion.h1
+              key={selectedCategory}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.05 }}
               className="text-3xl md:text-4xl font-heading font-bold text-primary-foreground"
             >
-              Explore Our <span className="text-primary">Product Catalog</span>
+              {selectedCategory === "scanners" ? (
+                <>Ricoh <span className="text-primary">Document Scanners</span></>
+              ) : (
+                <>Explore Our <span className="text-primary">Product Catalog</span></>
+              )}
             </motion.h1>
             <motion.p
+              key={`desc-${selectedCategory}`}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
               className="text-primary-foreground/60 mt-3 max-w-md"
             >
-              Browse printers, scanners, projectors, whiteboards and more from world-class brands.
+              {selectedCategory === "scanners"
+                ? "Efficient workflows. Scalable productivity. Industry-leading fi Series scanners for every business need."
+                : "Browse printers, scanners, projectors, whiteboards and more from world-class brands."}
             </motion.p>
           </div>
           <motion.div
