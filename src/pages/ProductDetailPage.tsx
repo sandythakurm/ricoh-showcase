@@ -11,6 +11,7 @@ import ProductCard from "@/components/ProductCard";
 import ProductHighlights from "@/components/ProductHighlights";
 import Meeting360Features from "@/components/Meeting360Features";
 import MonitorFlexibilitySection from "@/components/MonitorFlexibilitySection";
+import MonitorAwardsSection from "@/components/MonitorAwardsSection";
 import {
   Accordion,
   AccordionContent,
@@ -224,6 +225,11 @@ const ProductDetailPage = () => {
       {/* Portable Monitor Flexibility Section */}
       {(product.id === "pm-150" || product.id === "pm-150bw") && (
         <MonitorFlexibilitySection />
+      )}
+
+      {/* Portable Monitor Awards Section */}
+      {(product.id === "pm-150" || product.id === "pm-150bw") && (
+        <MonitorAwardsSection />
       )}
 
       {/* Specifications - Grouped Accordion Style */}
