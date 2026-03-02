@@ -30,6 +30,11 @@ const subcategoriesMap: Record<string, { id: string; name: string }[]> = {
     { id: "Broad Use", name: "Broad Use" },
     { id: "High End", name: "High End" },
   ],
+  "portable-monitors": [
+    { id: "Wired", name: "Wired" },
+    { id: "Wireless", name: "Wireless" },
+    { id: "Accessories", name: "Accessories" },
+  ],
 };
 
 const ProductsPage = () => {
