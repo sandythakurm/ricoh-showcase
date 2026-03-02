@@ -153,7 +153,36 @@ const ProductDetailPage = () => {
         </section>
       )}
 
-      {/* Meeting 360 Custom Features Section */}
+      {/* Meeting 360 Video + Custom Features */}
+      {product.id === "meeting-360" && (
+        <section className="py-14 bg-background">
+          <div className="container">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-8"
+            >
+              <h2 className="text-2xl md:text-3xl font-heading font-bold mb-3">Bringing people and ideas together</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">See how RICOH Meeting 360 transforms hybrid meetings with immersive 360° video, crystal-clear audio, and intelligent speaker tracking.</p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="relative w-full max-w-4xl mx-auto aspect-video rounded-2xl overflow-hidden border shadow-lg"
+            >
+              <iframe
+                src="https://www.youtube.com/embed/K9FAjKlIN7g?rel=0"
+                title="RICOH Meeting 360: 3-in-1 Video Conferencing Camera Perfect for Hybrid Meetings"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full"
+              />
+            </motion.div>
+          </div>
+        </section>
+      )}
       {product.id === "meeting-360" && <Meeting360Features />}
 
       {/* Highlights - Alternating Image/Text Layout */}
