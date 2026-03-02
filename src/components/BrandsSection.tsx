@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import brandRicoh from "@/assets/brand-ricoh.jpg";
+import brandRicoh from "@/assets/ricoh-logo-partner.png";
 import brandHP from "@/assets/brand-hp.jpg";
 import brandLenovo from "@/assets/brand-lenovo.png";
 import brandLogitech from "@/assets/brand-logitech.jpg";
