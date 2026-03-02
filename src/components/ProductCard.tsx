@@ -48,7 +48,7 @@ const ProductCard = ({ product }: { product: Product }) => (
     </div>
     <div className="p-5">
       {product.brand === "ricoh" ? (
-        <img src={ricohLogo} alt="Ricoh" className="h-4 mb-2" />
+        <img src={ricohLogo} alt="Ricoh" className="h-8 mb-2" />
       ) : (
         <p className="text-xs font-medium text-primary uppercase tracking-wider mb-1">{product.brand}</p>
       )}
