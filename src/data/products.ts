@@ -61,26 +61,6 @@ export const products: Product[] = [
   ...scannerProducts,
   // Whiteboard products
   ...whiteboardProducts,
-  {
-    id: "thinkpad-x1-carbon",
-    name: "ThinkPad X1 Carbon Gen 12",
-    category: "laptops",
-    brand: "lenovo",
-    image: productLaptop,
-    description: "Ultra-lightweight business laptop with Intel Core Ultra processors and stunning 14\" display.",
-    features: ["Intel Core Ultra", "14\" 2.8K OLED", "Under 1.1kg", "All-Day Battery"],
-    specs: { "Processor": "Intel Core Ultra 7", "Display": "14\" 2.8K OLED", "Weight": "1.09 kg", "Battery": "Up to 15 hours" },
-  },
-  {
-    id: "legion-9i",
-    name: "Legion 9i Gen 9",
-    category: "laptops",
-    brand: "lenovo",
-    image: productLaptop,
-    description: "Premium gaming laptop with liquid cooling and top-tier performance.",
-    features: ["Intel Core i9", "RTX 4090", "Liquid Cooling", "Mini LED Display"],
-    specs: { "Processor": "Intel Core i9-14900HX", "GPU": "RTX 4090", "Display": "16\" Mini LED" },
-  },
 ];
 
 export const getProductsByCategory = (categoryId: string) =>
