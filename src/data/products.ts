@@ -79,8 +79,21 @@ export const getProductsByCategory = (categoryId: string) =>
 export const getProductsByBrand = (brandId: string) =>
   products.filter((p) => p.brand === brandId);
 
+const featuredIds = [
+  "fi-8170",         // Scanner
+  "im-370",          // Printer B&W
+  "im-c300",         // Printer Colour
+  "im-430fse",       // Multi-function Printer
+  "pj-wul5a50",      // Projector
+  "a7510-whiteboard", // Interactive Board
+  "pm-150",          // Portable Monitor
+  "meeting-360",     // Smart Meeting
+];
+
 export const getFeaturedProducts = () =>
-  products.filter((p) => p.isFeatured);
+  featuredIds
+    .map((id) => products.find((p) => p.id === id))
+    .filter((p): p is Product => !!p);
 
 export const getRicohProducts = () =>
   products.filter((p) => p.brand === "ricoh");
