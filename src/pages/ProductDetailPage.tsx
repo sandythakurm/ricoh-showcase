@@ -8,6 +8,7 @@ import CTASection from "@/components/CTASection";
 import { getProductById, getProductsByCategory } from "@/data/products";
 import ProductCard from "@/components/ProductCard";
 import ProductHighlights from "@/components/ProductHighlights";
+import Meeting360Features from "@/components/Meeting360Features";
 import {
   Accordion,
   AccordionContent,
@@ -151,6 +152,9 @@ const ProductDetailPage = () => {
           </div>
         </section>
       )}
+
+      {/* Meeting 360 Custom Features Section */}
+      {product.id === "meeting-360" && <Meeting360Features />}
 
       {/* Highlights - Alternating Image/Text Layout */}
       {product.highlights && product.highlights.length > 0 && (
