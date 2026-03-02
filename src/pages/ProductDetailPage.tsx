@@ -68,14 +68,14 @@ const ProductDetailPage = () => {
 
       {/* Meeting 360 Hero Banner */}
       {product.id === "meeting-360" && (
-        <section className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden">
+        <section className="relative w-full overflow-hidden">
           <img
             src={meeting360HeroImg}
             alt="RICOH Meeting 360 in a conference room"
-            className="absolute inset-0 w-full h-full object-cover"
+            className="w-full h-auto object-contain"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-background/70 to-transparent" />
-          <div className="relative container h-full flex flex-col justify-end pb-12">
+          <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-background/30 to-transparent" />
+          <div className="absolute inset-0 container flex flex-col justify-end pb-12">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
