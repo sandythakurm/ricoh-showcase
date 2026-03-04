@@ -12,6 +12,7 @@ import { whiteboardProducts } from "./whiteboardProducts";
 import { printerProducts } from "./printerProducts";
 import { meetingProducts } from "./meetingProducts";
 import { monitorProducts } from "./monitorProducts";
+import { optomaProjectorProducts } from "./optomaProjectorProducts";
 
 export interface Product {
   id: string;
@@ -70,6 +71,8 @@ export const products: Product[] = [
   ...meetingProducts,
   // Portable Monitor products
   ...monitorProducts,
+  // Optoma Projector products
+  ...optomaProjectorProducts,
 ];
 
 export const getProductsByCategory = (categoryId: string) =>
