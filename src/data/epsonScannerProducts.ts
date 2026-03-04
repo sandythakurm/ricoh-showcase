@@ -1,8 +1,37 @@
 import imgV19II from "@/assets/scanners/epson-v19ii.jpg";
+import imgV19IIOpen from "@/assets/scanners/epson-v19ii-open.jpg";
+import imgV19IIBook from "@/assets/scanners/epson-v19ii-book.jpg";
+import imgV19IIStanding from "@/assets/scanners/epson-v19ii-standing.jpg";
+import imgV19IILaptop from "@/assets/scanners/epson-v19ii-laptop.jpg";
+import imgV19IIClarity from "@/assets/scanners/epson-v19ii-clarity.jpg";
+import imgV19IIRestore from "@/assets/scanners/epson-v19ii-restore.jpg";
+
 import imgV39II from "@/assets/scanners/epson-v39ii.jpg";
+import imgV39IIOpen from "@/assets/scanners/epson-v39ii-open.jpg";
+import imgV39IIBook from "@/assets/scanners/epson-v39ii-book.jpg";
+import imgV39IIStanding from "@/assets/scanners/epson-v39ii-standing.jpg";
+import imgV39IILaptop from "@/assets/scanners/epson-v39ii-laptop.jpg";
+import imgV39IIClarity from "@/assets/scanners/epson-v39ii-clarity.jpg";
+import imgV39IIStitching from "@/assets/scanners/epson-v39ii-stitching.jpg";
+
 import imgFF680W from "@/assets/scanners/epson-ff680w.jpg";
+
 import imgV850 from "@/assets/scanners/epson-v850.jpg";
+import imgV850Color from "@/assets/scanners/epson-v850-color.jpg";
+import imgV850ICE from "@/assets/scanners/epson-v850-ice.jpg";
+import imgV850Holders from "@/assets/scanners/epson-v850-holders.jpg";
+import imgV850LED from "@/assets/scanners/epson-v850-led.jpg";
+
 import img13000XL from "@/assets/scanners/epson-13000xl.jpg";
+import img13000XLOpen from "@/assets/scanners/epson-13000xl-open.jpg";
+import img13000XLMedia from "@/assets/scanners/epson-13000xl-media.jpg";
+import img13000XLSide from "@/assets/scanners/epson-13000xl-side.jpg";
+import img13000XLLifestyle from "@/assets/scanners/epson-13000xl-lifestyle.jpg";
+import img13000XLBed from "@/assets/scanners/epson-13000xl-bed.jpg";
+import img13000XLClarity from "@/assets/scanners/epson-13000xl-clarity.jpg";
+import img13000XLColor from "@/assets/scanners/epson-13000xl-color.jpg";
+import img13000XLFeatures from "@/assets/scanners/epson-13000xl-features.jpg";
+
 import type { Product } from "./products";
 
 export const epsonScannerProducts: Product[] = [
@@ -13,6 +42,7 @@ export const epsonScannerProducts: Product[] = [
     subcategory: "Photo & Graphic",
     brand: "epson",
     image: imgV19II,
+    gallery: [imgV19II, imgV19IIOpen, imgV19IIBook, imgV19IIStanding, imgV19IILaptop],
     tagline: "Affordable, easy-to-use photo scanning for everyday needs",
     description:
       "The affordable, easy-to-use, high-resolution photo scanner for everyday scanning and sharing. 4800 dpi optical resolution with USB-powered portability, built-in kickstand, and Epson ScanSmart software.",
@@ -22,18 +52,22 @@ export const epsonScannerProducts: Product[] = [
       {
         title: "Amazing Image Clarity & Detail",
         text: "4800 dpi optical resolution ideal for photo enlargements, artwork, illustrations, documents and more. Capture every detail with precision flatbed scanning.",
+        image: imgV19IIClarity,
       },
       {
         title: "One-Touch Scanning",
         text: "Scan in fewer steps with easy-to-use buttons. Epson ScanSmart software provides an intuitive interface for scanning, saving, and sharing.",
+        image: imgV19IILaptop,
       },
       {
         title: "Restore Colour to Faded Photos",
         text: "With one click, Easy Photo Fix technology makes it simple to bring old photos back to life. Basic image stitching lets you scan oversized items in sections.",
+        image: imgV19IIRestore,
       },
       {
         title: "USB-Powered Portability",
         text: "At just 3.1 lbs with USB power and a space-saving built-in kickstand for vertical placement, the V19 II goes wherever you need it.",
+        image: imgV19IIStanding,
       },
     ],
     features: [
@@ -61,7 +95,7 @@ export const epsonScannerProducts: Product[] = [
       "OS Support": "Windows, macOS",
     },
     specsGrouped: {
-      "Scanning": {
+      Scanning: {
         "Scanner Type": "Flatbed",
         "Optical Resolution": "4800 dpi",
         "Flatbed Size": '8.5" x 11.7"',
@@ -69,14 +103,14 @@ export const epsonScannerProducts: Product[] = [
         "Image Sensor": "CIS",
         "Light Source": "LED",
       },
-      "Connectivity": {
+      Connectivity: {
         Interface: "Hi-Speed USB 2.0 (USB-powered)",
       },
-      "Physical": {
+      Physical: {
         Weight: "1.4 kg (3.1 lbs)",
         "Special Features": "Built-in kickstand, removable high-rise lid",
       },
-      "Software": {
+      Software: {
         Included: "Epson ScanSmart, Easy Photo Fix",
         "Cloud Support": "Scan to Cloud services",
       },
@@ -90,6 +124,7 @@ export const epsonScannerProducts: Product[] = [
     subcategory: "Photo & Graphic",
     brand: "epson",
     image: imgV39II,
+    gallery: [imgV39II, imgV39IIOpen, imgV39IIBook, imgV39IIStanding, imgV39IILaptop],
     tagline: "High-resolution scanner for restoring, archiving, and sharing",
     description:
       "The easy-to-use, high-resolution scanner for restoring, archiving, and sharing photos and documents. 4800 dpi optical resolution with advanced image stitching and Epson ScanSmart software.",
@@ -99,18 +134,22 @@ export const epsonScannerProducts: Product[] = [
       {
         title: "Amazing Image Clarity & Detail",
         text: "4800 dpi optical resolution ideal for photo enlargements, artwork, illustrations, documents and more. Capture sharp, vibrant scans every time.",
+        image: imgV39IIClarity,
       },
       {
         title: "Advanced Image Stitching",
         text: "Stitch oversized images together seamlessly with Epson ScanSmart software. Send scans directly to cloud storage services for easy access and sharing.",
+        image: imgV39IIStitching,
       },
       {
         title: "Restore Colour to Faded Photos",
         text: "Easy Photo Fix technology restores colour and detail to old, faded photos with just one click — bringing memories back to life effortlessly.",
+        image: imgV39IILaptop,
       },
       {
         title: "Scan Books & Photo Albums",
         text: "High-rise, removable lid accommodates books, photo albums, and other bound materials for versatile scanning beyond standard documents.",
+        image: imgV39IIBook,
       },
     ],
     features: [
@@ -136,7 +175,7 @@ export const epsonScannerProducts: Product[] = [
       "OS Support": "Windows, macOS",
     },
     specsGrouped: {
-      "Scanning": {
+      Scanning: {
         "Scanner Type": "Flatbed",
         "Optical Resolution": "4800 dpi",
         "Flatbed Size": '8.5" x 11.7"',
@@ -144,10 +183,10 @@ export const epsonScannerProducts: Product[] = [
         "Image Sensor": "CIS",
         "Light Source": "LED",
       },
-      "Connectivity": {
+      Connectivity: {
         Interface: "Hi-Speed USB 2.0 (USB-powered)",
       },
-      "Software": {
+      Software: {
         Included: "Epson ScanSmart, Easy Photo Fix",
         "Cloud Support": "Scan to Cloud services",
         "Image Stitching": "Advanced",
@@ -161,6 +200,7 @@ export const epsonScannerProducts: Product[] = [
     subcategory: "Photo & Graphic",
     brand: "epson",
     image: imgFF680W,
+    gallery: [imgFF680W],
     tagline: "World's fastest personal photo scanner",
     description:
       "High-speed wireless photo scanning system that scans a single 4×6 photo in about one second. 100-page ADF handles multiple sizes in one batch with 600 dpi resolution and USB/Wi-Fi connectivity.",
@@ -170,18 +210,22 @@ export const epsonScannerProducts: Product[] = [
       {
         title: "Lightning-Fast Photo Scanning",
         text: "Scan a single 4×6 photo in about one second at 300 dpi. At 45 ppm / 90 ipm, you can digitise entire photo collections in a fraction of the time.",
+        image: imgFF680W,
       },
       {
         title: "100-Page Auto Document Feeder",
         text: "Load up to 100 photos at once and handle multiple sizes in one batch — from wallet-size prints to panoramics up to 36 inches long.",
+        image: imgFF680W,
       },
       {
         title: "Wireless Connectivity",
         text: "Scan wirelessly via Wi-Fi or use the USB connection. Upload directly to cloud services and share your digitised memories instantly.",
+        image: imgFF680W,
       },
       {
         title: "Intelligent Photo Enhancement",
         text: "FastFoto software automatically enhances, de-skews, crops, and restores colour to photos. Even captures handwritten notes on the back of prints.",
+        image: imgFF680W,
       },
     ],
     features: [
@@ -192,7 +236,7 @@ export const epsonScannerProducts: Product[] = [
       "Handles Multiple Sizes in One Batch",
       "Auto Photo Enhancement & Colour Restoration",
       "Captures Handwritten Notes on Back",
-      "Scans Photos Up to 36\" Long",
+      'Scans Photos Up to 36" Long',
       "Safe Photo Handling Technology",
       "Epson FastFoto Software",
       "Windows & macOS Compatible",
@@ -203,11 +247,11 @@ export const epsonScannerProducts: Product[] = [
       "Optical Resolution": "600 dpi",
       "ADF Capacity": "100 sheets",
       "Max Scan Length": '36"',
-      "Connectivity": "USB 3.0, Wi-Fi (802.11 b/g/n)",
+      Connectivity: "USB 3.0, Wi-Fi (802.11 b/g/n)",
       "OS Support": "Windows, macOS",
     },
     specsGrouped: {
-      "Scanning": {
+      Scanning: {
         "Scanner Type": "Sheet-fed with ADF",
         "Scan Speed": "45 ppm / 90 ipm (300 dpi)",
         "Optical Resolution": "600 dpi",
@@ -215,11 +259,11 @@ export const epsonScannerProducts: Product[] = [
         "Max Scan Length": '36"',
         "Photo Sizes": "Wallet to panoramic",
       },
-      "Connectivity": {
+      Connectivity: {
         USB: "USB 3.0",
         "Wi-Fi": "802.11 b/g/n",
       },
-      "Software": {
+      Software: {
         Included: "Epson FastFoto, ScanSmart",
         Features: "Auto enhancement, colour restoration, back-side capture",
       },
@@ -233,6 +277,7 @@ export const epsonScannerProducts: Product[] = [
     subcategory: "Photo & Graphic",
     brand: "epson",
     image: imgV850,
+    gallery: [imgV850, imgV850Color, imgV850ICE, imgV850Holders, imgV850LED],
     tagline: "Pro-quality scanner for archiving film and photos",
     description:
       "Professional-quality photo scanner with 6400 dpi optical resolution, 4.0 Dmax, exclusive Dual Lens System, Digital ICE Technologies, and ReadyScan LED. Ideal for archiving slides, negatives, and film.",
@@ -242,18 +287,22 @@ export const epsonScannerProducts: Product[] = [
       {
         title: "Professional Colour & Detail",
         text: "State-of-the-art 6400 dpi optical resolution with advanced optics and a high-reflection mirror with anti-reflective coatings for unparalleled scan quality.",
+        image: imgV850Color,
       },
       {
         title: "Exclusive Dual Lens System",
         text: "Automatically selects from two lenses for optimum results based on the media being scanned — delivering the best possible quality for every original.",
+        image: imgV850LED,
       },
       {
         title: "Digital ICE Technologies",
         text: "Automatically remove dust and scratches from film and prints to minimise costly retouching. Works with 35mm and medium-format film.",
+        image: imgV850ICE,
       },
       {
         title: "ReadyScan LED & Film Holders",
         text: "Fast scans with no warmup time. Two sets of film holders included for batch scanning slides, negatives, medium- and large-format film.",
+        image: imgV850Holders,
       },
     ],
     features: [
@@ -280,10 +329,10 @@ export const epsonScannerProducts: Product[] = [
       "Image Sensor": "CCD (Dual Lens)",
       "Light Source": "ReadyScan LED",
       "Digital ICE": "35mm and medium-format",
-      "Connectivity": "Hi-Speed USB 2.0",
+      Connectivity: "Hi-Speed USB 2.0",
     },
     specsGrouped: {
-      "Scanning": {
+      Scanning: {
         "Scanner Type": "Flatbed with Transparency Unit",
         "Optical Resolution": "6400 dpi (Dual Lens System)",
         "Film Optical Resolution": "6400 dpi",
@@ -295,7 +344,7 @@ export const epsonScannerProducts: Product[] = [
       "Optics & Sensor": {
         "Image Sensor": "CCD with Dual Lens System",
         "Light Source": "ReadyScan LED (no warmup)",
-        "Mirror": "High-reflection with anti-reflective coatings",
+        Mirror: "High-reflection with anti-reflective coatings",
         "Digital ICE": "35mm and medium-format film & prints",
       },
       "Film Holders": {
@@ -304,10 +353,10 @@ export const epsonScannerProducts: Product[] = [
         "Medium Format 6×20cm": "2 holders included",
         '4" x 5"': "2 holders included",
       },
-      "Connectivity": {
+      Connectivity: {
         Interface: "Hi-Speed USB 2.0",
       },
-      "Software": {
+      Software: {
         Included: "SilverFast SE Plus, X-Rite i1Scanner",
         "IT8 Targets": "Reflective & transparent included",
       },
@@ -320,27 +369,32 @@ export const epsonScannerProducts: Product[] = [
     subcategory: "Photo & Graphic",
     brand: "epson",
     image: img13000XL,
+    gallery: [img13000XL, img13000XLOpen, img13000XLMedia, img13000XLSide, img13000XLLifestyle, img13000XLFeatures],
     tagline: "Large-format archival scanner for extraordinary photo & graphics scanning",
     description:
-      "Professional large-format archival scanner accommodating reflective media up to 12.2\" x 17.2\". 2400 x 4800 dpi resolution, 3.8 Dmax, MatrixCCD and ReadyScan LED technologies for brilliant colour accuracy.",
+      'Professional large-format archival scanner accommodating reflective media up to 12.2" x 17.2". 2400 x 4800 dpi resolution, 3.8 Dmax, MatrixCCD and ReadyScan LED technologies for brilliant colour accuracy.',
     overview:
-      "Take large-format photo and graphics scanning to a new level with the Epson Expression 13000XL. Engineered for demanding applications such as photo archiving and graphic arts, this powerful scanner uses 2400 x 4800 dpi resolution with an optical density of 3.8 Dmax for clean, sharp images. Epson MatrixCCD and ReadyScan LED technologies plus 48-bit colour depth deliver brilliant, vibrant colours with incredible accuracy. The extra-large scan bed accommodates reflective and other media up to 12.2\" x 17.2\". Add the optional Transparency Unit to scan film and transparent materials up to 12\" x 16.5\". One-touch colour restoration, batch scanning, and SilverFast Ai software enhance productivity.",
+      'Take large-format photo and graphics scanning to a new level with the Epson Expression 13000XL. Engineered for demanding applications such as photo archiving and graphic arts, this powerful scanner uses 2400 x 4800 dpi resolution with an optical density of 3.8 Dmax for clean, sharp images. Epson MatrixCCD and ReadyScan LED technologies plus 48-bit colour depth deliver brilliant, vibrant colours with incredible accuracy. The extra-large scan bed accommodates reflective and other media up to 12.2" x 17.2". Add the optional Transparency Unit to scan film and transparent materials up to 12" x 16.5". One-touch colour restoration, batch scanning, and SilverFast Ai software enhance productivity.',
     highlights: [
       {
         title: "Extra-Large Scan Bed",
-        text: "Accommodates reflective media up to 12.2\" x 17.2\" — perfect for oversized photos, artwork, graphic prints, and archival materials.",
+        text: 'Accommodates reflective media up to 12.2" x 17.2" — perfect for oversized photos, artwork, graphic prints, and archival materials.',
+        image: img13000XLBed,
       },
       {
         title: "Brilliant Clarity & Detail",
         text: "2400 x 4800 dpi resolution, Epson Micro Step Drive technology and 3.8 Dmax provide exceptional archival scanning quality.",
+        image: img13000XLClarity,
       },
       {
         title: "Extraordinary Colour Accuracy",
         text: "Epson MatrixCCD and ReadyScan LED technologies with 48-bit colour depth produce scans true to the originals with vibrant, accurate colours.",
+        image: img13000XLColor,
       },
       {
         title: "Optional Transparency Unit",
-        text: "Scan film up to 12\" x 16.5\" with the optional Transparency Unit accessory. Supports 35mm, medium-format, and large-format film with included holders.",
+        text: 'Scan film up to 12" x 16.5" with the optional Transparency Unit accessory. Supports 35mm, medium-format, and large-format film with included holders.',
+        image: img13000XLLifestyle,
       },
     ],
     features: [
@@ -352,7 +406,7 @@ export const epsonScannerProducts: Product[] = [
       "48-bit Colour Depth",
       "One-Touch Colour Restoration",
       "TWAIN Driver Support",
-      "Optional Transparency Unit (12\" x 16.5\")",
+      'Optional Transparency Unit (12" x 16.5")',
       "SilverFast Ai Software",
       "Hi-Speed USB 2.0",
       "Windows & macOS Compatible",
@@ -366,11 +420,11 @@ export const epsonScannerProducts: Product[] = [
       "Colour Depth": "48-bit",
       "Image Sensor": "MatrixCCD",
       "Light Source": "ReadyScan LED",
-      "Connectivity": "Hi-Speed USB 2.0",
+      Connectivity: "Hi-Speed USB 2.0",
       "Driver Support": "TWAIN",
     },
     specsGrouped: {
-      "Scanning": {
+      Scanning: {
         "Scanner Type": "Flatbed, Large Format",
         "Optical Resolution": "2400 x 4800 dpi",
         "Flatbed Size": '12.2" x 17.2"',
@@ -383,11 +437,11 @@ export const epsonScannerProducts: Product[] = [
         "Light Source": "ReadyScan LED (no warmup)",
         Technology: "Micro Step Drive",
       },
-      "Connectivity": {
+      Connectivity: {
         Interface: "Hi-Speed USB 2.0",
         "Driver Support": "TWAIN, ISIS",
       },
-      "Software": {
+      Software: {
         Included: "LaserSoft Imaging SilverFast Ai",
         "Colour Restoration": "Easy Photo Fix (one-touch)",
       },
