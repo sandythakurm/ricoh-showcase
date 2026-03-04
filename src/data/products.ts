@@ -48,12 +48,11 @@ export const categories = [
 
 export const brands = [
   { id: "ricoh", name: "Ricoh", isPrimary: true },
-  { id: "hp", name: "HP" },
-  { id: "lenovo", name: "Lenovo" },
+  { id: "epson", name: "Epson" },
+  { id: "optoma", name: "Optoma" },
   { id: "logitech", name: "Logitech" },
   { id: "chromaluxe", name: "ChromaLuxe" },
   { id: "iq", name: "IQ" },
-  { id: "epson", name: "Epson" },
   { id: "sawgrass", name: "Sawgrass" },
   { id: "spc", name: "Swiss Performance Chemicals" },
 ];
