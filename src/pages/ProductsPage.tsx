@@ -21,6 +21,7 @@ const subcategoriesMap: Record<string, { id: string; name: string }[]> = {
     { id: "Departmental", name: "Departmental" },
     { id: "Network", name: "Network" },
     { id: "Production", name: "Production" },
+    { id: "Photo & Graphic", name: "Photo & Graphic" },
   ],
   projectors: [
     { id: "Compact", name: "Compact" },
