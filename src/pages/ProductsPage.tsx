@@ -107,9 +107,7 @@ const ProductsPage = () => {
             >
               {selectedCategory === "scanners"
                 ? "Efficient workflows. Scalable productivity. Industry-leading fi Series scanners for every business need."
-                : selectedCategory === "printers"
-                ? "Color and black-and-white printers and multifunction devices with security, efficiency, and sustainability built in."
-                : "Browse printers, scanners, projectors, whiteboards and more from world-class brands."}
+                : "Browse scanners, projectors, whiteboards, monitors and more from world-class brands."}
             </motion.p>
           </div>
           <motion.div

@@ -68,14 +68,12 @@ export const getProductsByBrand = (brandId: string) =>
   products.filter((p) => p.brand === brandId);
 
 const featuredIds = [
-  "fi-8170",         // Scanner
-  "im-370",          // Printer B&W
-  "im-c300",         // Printer Colour
-  "im-430fse",       // Multi-function Printer
-  "pj-wul5a50",      // Projector
-  "a7510-whiteboard", // Interactive Board
-  "pm-150",          // Portable Monitor
-  "meeting-360",     // Smart Meeting
+  "fi-8170",
+  "pj-wul5a50",
+  "a7510-whiteboard",
+  "pm-150",
+  "meeting-360",
+  "epson-v850",
 ];
 
 export const getFeaturedProducts = () =>
