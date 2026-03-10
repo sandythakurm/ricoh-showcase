@@ -45,6 +45,11 @@ const AboutPage = () => (
               </p>
             </div>
           </div>
+
+          <p className="text-lg leading-relaxed mb-6">
+            In addition, we also supply Epson scanners and Optoma projectors, expanding our portfolio 
+            with reliable and high-performance technology solutions.
+          </p>
         </motion.div>
       </div>
     </section>
