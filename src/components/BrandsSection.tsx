@@ -1,9 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import brandRicoh from "@/assets/ricoh-logo-partner.png";
-import brandLogitech from "@/assets/brand-logitech.jpg";
-import brandChromaluxe from "@/assets/brand-chromaluxe.webp";
-import brandIQ from "@/assets/brand-iq.png";
 import brandEpson from "@/assets/brand-epson.png";
 import brandOptoma from "@/assets/brand-optoma.webp";
 
@@ -11,9 +8,6 @@ const brandsWithLogos = [
   { id: "ricoh", name: "Ricoh", logo: brandRicoh, isPrimary: true },
   { id: "epson", name: "Epson", logo: brandEpson },
   { id: "optoma", name: "Optoma", logo: brandOptoma },
-  { id: "logitech", name: "Logitech", logo: brandLogitech },
-  { id: "chromaluxe", name: "ChromaLuxe", logo: brandChromaluxe },
-  { id: "iq", name: "IQ", logo: brandIQ },
 ];
 
 const BrandsSection = () => (
