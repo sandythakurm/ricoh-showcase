@@ -69,7 +69,9 @@ export const getProductsByBrand = (brandId: string) =>
 
 const featuredIds = [
   "fi-8170",
+  "fi-8290",
   "pj-wul5a50",
+  "optoma-zu920t",
   "a7510-whiteboard",
   "pm-150",
   "meeting-360",
