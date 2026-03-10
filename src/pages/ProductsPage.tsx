@@ -69,17 +69,6 @@ const ProductsPage = () => {
               title="Ricoh fi-Series Scanners"
             />
           </div>
-        ) : selectedCategory === "printers" ? (
-          <div className="absolute inset-0 w-full h-full">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover"
-              src="/videos/ricoh-promo.mp4"
-            />
-          </div>
         ) : (
           <img src={heroBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
         )}
