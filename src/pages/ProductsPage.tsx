@@ -11,11 +11,6 @@ import { products, categories, brands } from "@/data/products";
 import { Search } from "lucide-react";
 
 const subcategoriesMap: Record<string, { id: string; name: string }[]> = {
-  printers: [
-    { id: "B&W All-in-One", name: "B&W All-in-One" },
-    { id: "Colour All-in-One", name: "Colour All-in-One" },
-    { id: "Single Function", name: "Single Function" },
-  ],
   scanners: [
     { id: "Workgroup", name: "Workgroup" },
     { id: "Departmental", name: "Departmental" },
@@ -74,17 +69,6 @@ const ProductsPage = () => {
               title="Ricoh fi-Series Scanners"
             />
           </div>
-        ) : selectedCategory === "printers" ? (
-          <div className="absolute inset-0 w-full h-full">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover"
-              src="/videos/ricoh-promo.mp4"
-            />
-          </div>
         ) : (
           <img src={heroBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
         )}
@@ -110,8 +94,6 @@ const ProductsPage = () => {
             >
               {selectedCategory === "scanners" ? (
                 <>Ricoh <span className="text-primary">Document Scanners</span></>
-              ) : selectedCategory === "printers" ? (
-                <>Ricoh <span className="text-primary">Printers & Copiers</span></>
               ) : (
                 <>Explore Our <span className="text-primary">Product Catalog</span></>
               )}
@@ -125,9 +107,7 @@ const ProductsPage = () => {
             >
               {selectedCategory === "scanners"
                 ? "Efficient workflows. Scalable productivity. Industry-leading fi Series scanners for every business need."
-                : selectedCategory === "printers"
-                ? "Color and black-and-white printers and multifunction devices with security, efficiency, and sustainability built in."
-                : "Browse printers, scanners, projectors, whiteboards and more from world-class brands."}
+                : "Browse scanners, projectors, whiteboards, monitors and more from world-class brands."}
             </motion.p>
           </div>
           <motion.div
