@@ -94,8 +94,6 @@ const ProductsPage = () => {
             >
               {selectedCategory === "scanners" ? (
                 <>Ricoh <span className="text-primary">Document Scanners</span></>
-              ) : selectedCategory === "printers" ? (
-                <>Ricoh <span className="text-primary">Printers & Copiers</span></>
               ) : (
                 <>Explore Our <span className="text-primary">Product Catalog</span></>
               )}
