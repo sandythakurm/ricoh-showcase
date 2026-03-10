@@ -23,13 +23,14 @@ const AboutPage = () => (
           className="prose prose-lg max-w-none text-muted-foreground"
         >
           <p className="text-lg leading-relaxed mb-6">
-            Founded in 2021, Bytes Distribution FZCO strives to be one of the best IT Distribution 
-            companies in the region with qualified professionals. Based in Dubai Silicon Oasis, we 
-            serve the Middle East and Africa region with a comprehensive suite of technology products.
+            Founded in 2021, Bytes Distribution FZCO strives to be one of the leading IT distribution 
+            companies in the region, supported by a team of highly qualified professionals. Based in 
+            Dubai Silicon Oasis, we serve businesses across the Middle East and Africa with a 
+            comprehensive portfolio of advanced technology products and solutions.
           </p>
           <p className="text-lg leading-relaxed mb-6">
-            Bytes Distribution FZCO has a full suite of products comprising printers, MFP, sublimation 
-            printers, notebooks, smart boards, projectors, modern office equipment, and supplies.
+            We offer a variety of products including scanners and smart meeting devices such as cameras, 
+            monitors, interactive whiteboards, and projectors.
           </p>
 
           <div className="bg-card border rounded-2xl p-8 my-10 flex items-center gap-6">
@@ -44,6 +45,11 @@ const AboutPage = () => (
               </p>
             </div>
           </div>
+
+          <p className="text-lg leading-relaxed mb-6">
+            In addition, we also supply Epson scanners and Optoma projectors, expanding our portfolio 
+            with reliable and high-performance technology solutions.
+          </p>
         </motion.div>
       </div>
     </section>
