@@ -12,6 +12,7 @@ import ProductHighlights from "@/components/ProductHighlights";
 import Meeting360Features from "@/components/Meeting360Features";
 import MonitorFlexibilitySection from "@/components/MonitorFlexibilitySection";
 import MonitorAwardsSection from "@/components/MonitorAwardsSection";
+import QuoteRequestDialog from "@/components/QuoteRequestDialog";
 import {
   Accordion,
   AccordionContent,
@@ -160,12 +161,17 @@ const ProductDetailPage = () => {
 
               {/* CTA */}
               <div className="flex flex-wrap gap-3">
-                <a
-                  href={`mailto:info@bytes-me.com?subject=Quote Request: ${product.name}&body=Hello, I would like to request a quote for ${product.name}.`}
-                  className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-xl font-heading font-semibold hover:bg-primary/90 transition-colors"
-                >
-                  <Mail className="h-5 w-5" /> Request a Quote
-                </a>
+                <QuoteRequestDialog
+                  productName={product.name}
+                  trigger={
+                    <button
+                      type="button"
+                      className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-xl font-heading font-semibold hover:bg-primary/90 transition-colors"
+                    >
+                      <Mail className="h-5 w-5" /> Request a Quote
+                    </button>
+                  }
+                />
                 <a
                   href="tel:+97156180396"
                   className="inline-flex items-center gap-2 border border-primary text-primary px-8 py-4 rounded-xl font-heading font-semibold hover:bg-primary/5 transition-colors"
