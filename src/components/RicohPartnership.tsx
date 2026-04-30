@@ -26,11 +26,11 @@ const RicohPartnership = () => (
           <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 leading-tight">
             Your Gateway to
             <br />
-            <span className="text-primary">Ricoh Technology</span>
+            <span className="text-primary">PFU Ricoh Technology</span>
           </h2>
           <p className="text-primary-foreground/70 text-lg leading-relaxed mb-8">
-            As the official Ricoh distributor for MEA and Africa, Bytes Distribution provides the full range 
-            of Ricoh's innovative products — from multifunction printers and production scanners to 
+            As the official PFU Ricoh distributor for MEA and Africa, Bytes Distribution provides the full range 
+            of PFU Ricoh's innovative products — from multifunction printers and production scanners to 
             interactive whiteboards and smart meeting solutions.
           </p>
         </motion.div>
