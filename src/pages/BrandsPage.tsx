@@ -40,7 +40,14 @@ const BrandsPage = () => (
                   brand.isPrimary ? "border-primary/30 ring-1 ring-primary/10" : ""
                 }`}
               >
-                <h2 className={`text-2xl font-heading font-bold ${brand.isPrimary ? "text-primary" : "text-foreground"}`}>
+                <div className="h-24 flex items-center justify-center mb-4">
+                  <img
+                    src={brandLogos[brand.id]}
+                    alt={`${brand.name} logo`}
+                    className="max-h-20 max-w-[200px] object-contain"
+                  />
+                </div>
+                <h2 className={`text-xl font-heading font-semibold ${brand.isPrimary ? "text-primary" : "text-foreground"}`}>
                   {brand.name}
                 </h2>
                 {brand.isPrimary && (
