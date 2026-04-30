@@ -14,7 +14,7 @@ const slides = [
     badge: "Official Authorized Distributor",
     title: <>Powering Business with</>,
     subtitle: "Your trusted technology partner in MEA & Africa",
-    description: "Bytes Distribution delivers a full suite of Ricoh products — projectors, scanners, interactive whiteboards, portable monitors, and smart meeting solutions across the region.",
+    description: "Bytes Distribution delivers a full suite of PFU Ricoh products — projectors, scanners, interactive whiteboards, portable monitors, and smart meeting solutions across the region.",
     cta: { label: "Explore Ricoh Products", href: "/products?brand=ricoh" },
     showRicohLogo: true,
   },
