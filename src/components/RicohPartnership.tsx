@@ -21,7 +21,7 @@ const RicohPartnership = () => (
           <div className="flex items-center gap-3 mb-6">
             <img src={ricohLogo} alt="Ricoh" className="h-14" />
             <div className="h-10 w-px bg-primary-foreground/20" />
-            <span className="text-sm text-primary-foreground/60 font-medium">Official Partnership</span>
+            <span className="text-sm text-primary-foreground/60 font-medium">Official PFU Ricoh Distributor — MEA & Africa</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 leading-tight">
             Your Gateway to
