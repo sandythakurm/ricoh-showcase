@@ -4,6 +4,15 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
 import { brands } from "@/data/products";
+import ricohLogo from "@/assets/ricoh-logo-partner.png";
+import epsonLogo from "@/assets/brand-epson.png";
+import optomaLogo from "@/assets/brand-optoma.webp";
+
+const brandLogos: Record<string, string> = {
+  ricoh: ricohLogo,
+  epson: epsonLogo,
+  optoma: optomaLogo,
+};
 
 const BrandsPage = () => (
   <div className="min-h-screen">
