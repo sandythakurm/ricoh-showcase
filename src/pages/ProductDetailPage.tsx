@@ -3,6 +3,15 @@ import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, Mail, Phone, Check, ChevronRight, ChevronDown, Zap, Users, Settings, Leaf } from "lucide-react";
 import meeting360HeroImg from "@/assets/meeting/meeting-360-hero.png";
+import ricohLogo from "@/assets/ricoh-logo-partner.png";
+import epsonLogo from "@/assets/brand-epson.png";
+import optomaLogo from "@/assets/brand-optoma.webp";
+
+const brandLogos: Record<string, string> = {
+  ricoh: ricohLogo,
+  epson: epsonLogo,
+  optoma: optomaLogo,
+};
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
@@ -131,8 +140,16 @@ const ProductDetailPage = () => {
 
             {/* Product Info */}
             <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }}>
-              <div className="flex items-center gap-2 mb-2">
-                <span className="text-xs font-bold text-primary uppercase tracking-widest">{product.brand}</span>
+              <div className="flex items-center gap-3 mb-3">
+                {brandLogos[product.brand] ? (
+                  <img
+                    src={brandLogos[product.brand]}
+                    alt={`${product.brand} logo`}
+                    className="h-8 max-w-[100px] object-contain"
+                  />
+                ) : (
+                  <span className="text-xs font-bold text-primary uppercase tracking-widest">{product.brand}</span>
+                )}
                 {product.isNew && (
                   <span className="text-xs font-bold bg-primary text-primary-foreground px-2.5 py-0.5 rounded-full">NEW</span>
                 )}
