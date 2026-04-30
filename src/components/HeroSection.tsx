@@ -34,7 +34,7 @@ const slides = [
     bg: heroSlide3,
     badge: "Trusted by Businesses Across the Region",
     title: <>Enterprise-Grade<br /><span className="text-primary">IT Distribution</span></>,
-    subtitle: "Ricoh • Epson • Optoma",
+    subtitle: "",
     description: "We distribute world-class technology brands with full warranty support, fast delivery, and expert technical assistance across MEA and Africa.",
     cta: { label: "Discover Our Brands", href: "/brands" },
     showRicohLogo: false,
