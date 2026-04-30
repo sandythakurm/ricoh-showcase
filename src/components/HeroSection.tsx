@@ -108,7 +108,7 @@ const HeroSection = () => {
                   </div>
                 </div>
 
-                <h1 className="text-5xl md:text-7xl font-heading font-bold text-primary-foreground leading-tight mb-4">
+                <h1 className="text-4xl md:text-6xl font-heading font-bold text-primary-foreground leading-tight mb-4 whitespace-nowrap">
                   {slide.title}
                 </h1>
 
