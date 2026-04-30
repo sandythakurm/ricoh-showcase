@@ -140,8 +140,16 @@ const ProductDetailPage = () => {
 
             {/* Product Info */}
             <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }}>
-              <div className="flex items-center gap-2 mb-2">
-                <span className="text-xs font-bold text-primary uppercase tracking-widest">{product.brand}</span>
+              <div className="flex items-center gap-3 mb-3">
+                {brandLogos[product.brand] ? (
+                  <img
+                    src={brandLogos[product.brand]}
+                    alt={`${product.brand} logo`}
+                    className="h-8 max-w-[100px] object-contain"
+                  />
+                ) : (
+                  <span className="text-xs font-bold text-primary uppercase tracking-widest">{product.brand}</span>
+                )}
                 {product.isNew && (
                   <span className="text-xs font-bold bg-primary text-primary-foreground px-2.5 py-0.5 rounded-full">NEW</span>
                 )}
