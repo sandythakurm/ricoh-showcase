@@ -3,6 +3,15 @@ import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, Mail, Phone, Check, ChevronRight, ChevronDown, Zap, Users, Settings, Leaf } from "lucide-react";
 import meeting360HeroImg from "@/assets/meeting/meeting-360-hero.png";
+import ricohLogo from "@/assets/ricoh-logo-partner.png";
+import epsonLogo from "@/assets/brand-epson.png";
+import optomaLogo from "@/assets/brand-optoma.webp";
+
+const brandLogos: Record<string, string> = {
+  ricoh: ricohLogo,
+  epson: epsonLogo,
+  optoma: optomaLogo,
+};
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
