@@ -26,7 +26,7 @@ const ContactPage = () => (
         >
           <iframe
             title="Bytes Distribution FZCO - Dubai Silicon Oasis"
-            src="https://www.google.com/maps?q=Dubai+Silicon+Oasis+DDP+Building+A1,+Dubai,+UAE&output=embed"
+            src="https://www.google.com/maps?q=Bytes+Distribution+FZCO,+Dubai+Silicon+Oasis+DDP+Building+A1,+Dubai,+UAE&output=embed"
             width="100%"
             height="360"
             style={{ border: 0 }}
