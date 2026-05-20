@@ -15,9 +15,26 @@ const ContactPage = () => (
         >
           Contact <span className="text-primary">Us</span>
         </motion.h1>
-        <p className="text-muted-foreground text-lg mb-12 max-w-xl">
+        <p className="text-muted-foreground text-lg mb-8 max-w-xl">
           Get in touch for product inquiries, quotes, and technical support
         </p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="mb-12 rounded-2xl overflow-hidden border shadow-sm"
+        >
+          <iframe
+            title="Bytes Distribution FZCO - Dubai Silicon Oasis"
+            src="https://www.google.com/maps?q=Dubai+Silicon+Oasis+DDP+Building+A1,+Dubai,+UAE&output=embed"
+            width="100%"
+            height="360"
+            style={{ border: 0 }}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
+          />
+        </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
